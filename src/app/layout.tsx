@@ -5,7 +5,7 @@ import Link from "next/link"
 import { Sun, Moon } from "lucide-react"
 import { MoonIcon } from "@heroicons/react/24/solid";
 import { Boldonse } from "next/font/google";
-import { ThemeToggle } from "./themeToggle";
+import { ThemeToggle } from "../components/themeToggle";
 
 const boldonse = Boldonse({
   subsets: ["latin"],
