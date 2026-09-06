@@ -1,6 +1,17 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Link from "next/link"
+import { Sun, Moon } from "lucide-react"
+import { MoonIcon } from "@heroicons/react/24/solid";
+import { Boldonse } from "next/font/google";
+import { ThemeToggle } from "./themeToggle";
+
+const boldonse = Boldonse({
+  subsets: ["latin"],
+  weight: "400",
+});
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,10 +31,25 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      lang="pt-br"
+      data-theme="dark"
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased overflow-x-hidden`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="overflow-x-hidden">
+        {/* Header */}
+        <header className="flex flex-shrink p-2 sm:p-5 border-b border-header-border">
+          {/* Tudo dentro do header */}
+          <div className="max-w-3xl mx-auto flex gap-2 sm:gap-3 items-center w-full">
+            <Link href="/" className="text-xs sm:text-sm font-bold mr-auto transition hover:text-semi-muted">AP</Link>
+            <Link href="/" className="text-xs sm:text-sm text-muted hover:text-semi-muted transition-colors duration-200">Projetos</Link>
+            <Link href="/" className="text-xs sm:text-sm text-muted hover:text-semi-muted transition-colors duration-200">Experiências</Link>
+            <Link href="/" className="text-xs sm:text-sm mr-3 sm:mr-3 text-muted hover:text-semi-muted transition-colors duration-200">Certificados</Link>
+            <span className="text-lg sm:text-2xl font-thin font-sans text-muted cursor-default">|</span>
+            <ThemeToggle />
+          </div>
+        </header>
+        {children}
+      </body>
     </html>
   );
 }
