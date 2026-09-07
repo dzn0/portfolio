@@ -4,19 +4,24 @@
   --background: #ffffff;
   --foreground: #171717;
   --header-border: #efefef;
+  --pfp-border: #efefef;
   --muted: #abb1ba;
   --semi-muted: #dae3f0;
   --icons: #7a7c7e;
+  color-scheme: dark;
 }
 
 :root[data-theme="dark"] {
     --background: #121212;
     --foreground: #ededed;
     --header-border: #1e2939;
+    --pfp-border: #7a7c7e;
     --icons: #abb1ba;
+    color-scheme: dark;
 }
 
 @theme inline {
+  --color-pfp-border: var(--pfp-border);
   --color-icons: var(--icons);
   --color-semi-muted: var(--semi-muted);
   --color-muted: var(--muted);
