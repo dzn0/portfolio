@@ -37,14 +37,15 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="overflow-x-hidden">
         {/* Header */}
-        <header className="flex flex-shrink p-2 sm:p-5 border-b border-header-border">
-          {/* Tudo dentro do header */}
-          <div className="max-w-3xl mx-auto flex gap-2 sm:gap-3 items-center w-full">
-            <Link href="/" className="text-xs sm:text-sm font-bold mr-auto transition hover:text-semi-muted">AP</Link>
+        <header className="flex flex-shrink p-3 sm:p-4 border-b border-header-border">
+          {/* Everything inside header */}
+          <div className="max-w-2xl mx-auto flex gap-2 sm:gap-3 items-center w-full">
+            <Link href="/" className="text-base sm:text-sm font-bold mr-auto transition hover:text-semi-muted">AP</Link>
             <Link href="/" className="text-xs sm:text-sm text-muted hover:text-semi-muted transition-colors duration-200">Projetos</Link>
-            <Link href="/" className="text-xs sm:text-sm text-muted hover:text-semi-muted transition-colors duration-200">Experiências</Link>
+            {/* Coming Soon */}
+            {/* <Link href="/" className="text-xs sm:text-sm text-muted hover:text-semi-muted transition-colors duration-200">Experiências</Link> */}
             <Link href="/" className="text-xs sm:text-sm mr-3 sm:mr-3 text-muted hover:text-semi-muted transition-colors duration-200">Certificados</Link>
-            <span className="text-lg sm:text-2xl font-thin font-sans text-muted cursor-default">|</span>
+            <span className="text-2xl sm:text-2xl font-thin font-sans text-muted cursor-default">|</span>
             <ThemeToggle />
           </div>
         </header>
