@@ -4,6 +4,7 @@
   --background: #ffffff;
   --foreground: #171717;
   --header-border: #efefef;
+  --project: #d9d9d9;
   --pfp-border: #efefef;
   --muted: #abb1ba;
   --semi-muted: #dae3f0;
@@ -12,6 +13,7 @@
 }
 
 :root[data-theme="dark"] {
+    --project: #2e343d;
     --background: #121212;
     --foreground: #ededed;
     --header-border: #1e2939;
@@ -21,6 +23,7 @@
 }
 
 @theme inline {
+  --color-project: var(--project);
   --color-pfp-border: var(--pfp-border);
   --color-icons: var(--icons);
   --color-semi-muted: var(--semi-muted);

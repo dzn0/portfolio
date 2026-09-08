@@ -21,9 +21,12 @@ export function ThemeToggle() {
         document.startViewTransition(applyTheme);
     };
     return theme === "light" ? (
-        <SunIcon onClick={toggleTheme} className="ml-3 mr-3 h-4 w-4 text-foreground text-muted hover:text-semi-muted transition duration-200 active:scale-70 cursor-pointer" />
-        
+        <button onClick={toggleTheme} className="ml-3 mr-3 cursor-pointer">
+            <SunIcon className="h-4 w-4 text-muted hover:text-semi-muted transition duration-200 active:scale-70" />
+        </button>
     ) : (
-        <MoonIcon onClick={toggleTheme} className="ml-3 mr-3 h-4 w-4 text-foreground text-muted hover:text-semi-muted transition duration-200 active:scale-70 cursor-pointer" />
+        <button onClick={toggleTheme} className="ml-3 mr-3 cursor-pointer">
+            <MoonIcon className="h-4 w-4 text-muted hover:text-semi-muted transition duration-200 active:scale-70" />
+        </button>
     )
 }

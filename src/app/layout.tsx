@@ -6,10 +6,17 @@ import { Sun, Moon } from "lucide-react"
 import { MoonIcon } from "@heroicons/react/24/solid";
 import { Boldonse } from "next/font/google";
 import { ThemeToggle } from "../components/themeToggle";
+import { Roboto_Mono } from "next/font/google";
+
 
 const boldonse = Boldonse({
   subsets: ["latin"],
   weight: "400",
+});
+
+const RobotoMono = Roboto_Mono({
+  variable: "--font-roboto-mono",
+  subsets: ["latin"],
 });
 
 
@@ -33,11 +40,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="pt-br"
       data-theme="dark"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased overflow-x-hidden`}
+      className={`${geistSans.variable} ${geistMono.variable} ${RobotoMono.variable} h-full antialiased overflow-x-hidden`}
     >
       <body className="overflow-x-hidden">
         {/* Header */}
-        <header className="flex flex-shrink p-3 sm:p-4 border-b border-header-border">
+        <header className="flex flex-shrink p-3 sm:p-3 border-b border-header-border">
           {/* Everything inside header */}
           <div className="max-w-[720px] mx-auto flex gap-3 sm:gap-3 items-center w-full">
             <Link href="/" className="text-base sm:text-sm font-bold mr-auto transition hover:text-semi-muted">APP</Link>

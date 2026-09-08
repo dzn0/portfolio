@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<style>
+  @page {
+    size: A4;
+    margin: 16mm 18mm;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: 'Calibri', 'Segoe UI', Arial, sans-serif;
+    color: #1a1a1a;
+    font-size: 10.3pt;
+    line-height: 1.38;
+  }
+  .header {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .name {
+    font-size: 16pt;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    line-height: 1;
+    margin: 0;
+  }
+  .title {
+    font-size: 13.5pt;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 2px 0;
+  }
+  .contact {
+    font-size: 9.3pt;
+    color: #222;
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  h2.section {
+    font-size: 11.3pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    border-bottom: 1.4px solid #1a1a1a;
+    margin: 14px 0 6px 0;
+    padding-bottom: 1px;
+  }
+
+  .entry { margin-bottom: 8px; }
+  .entry p { margin: 0; }
+  .entry-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .entry-title {
+    font-weight: 700;
+    font-size: 10.3pt;
+  }
+  .entry-place {
+    font-weight: 700;
+  }
+  .entry-date {
+    font-style: italic;
+    font-size: 9.6pt;
+    white-space: nowrap;
+    margin-left: 10px;
+  }
+  .entry-sub {
+    font-style: italic;
+    font-size: 9.6pt;
+    margin-bottom: 2px;
+  }
+  .stack-line {
+    font-size: 9.3pt;
+    color: #333;
+    margin: 1px 0 3px 0;
+  }
+  ul {
+    margin: 2px 0 0 0;
+    padding-left: 16px;
+  }
+  li {
+    margin-bottom: 1.5px;
+  }
+  .skills-row {
+    margin-bottom: 3px;
+  }
+  .skills-label {
+    font-weight: 700;
+  }
+  .edu-degree {
+    font-size: 10.3pt;
+    font-weight: 700;
+  }
+</style>
+</head>
+<body>
+
+  <div class="header">
+    <p class="name">ANDRÉ P. PIERI</p>
+    <p class="title">Full-Stack Web Developer</p>
+    <p class="contact">
+      Dourados • Mato Grosso do Sul, Brasil &nbsp;|&nbsp; 67 99611-5591 &nbsp;|&nbsp; andrepereirapieri@gmail.com<br>
+      github.com/dzn0 &nbsp;|&nbsp;
+      linkedin.com/in/andré-pieri
+    </p>
+  </div>
+
+  <h2 class="section">Experiência Profissional</h2>
+
+  <div class="entry">
+    <div class="entry-row">
+      <span class="entry-place">OSHIRO ARQUITETURA</span>
+      <span class="entry-date">Dourados, Mato Grosso do Sul</span>
+    </div>
+    <div class="entry-row">
+      <span class="entry-sub">Estagiário de Projetos</span>
+      <span class="entry-date">Abril 2024 – Julho 2025</span>
+    </div>
+    <ul>
+      <li>Desenvolvi sketches e modelagens 3D/2D para projetos residenciais utilizando AutoCAD, SketchUp e Revit.</li>
+      <li>Produzi renderizações fotorrealistas com Enscape para apresentação visual de projetos a clientes.</li>
+      <li>Participei de reuniões com clientes, contribuindo em decisões de projeto e ajustes conforme requisitos apresentados.</li>
+    </ul>
+  </div>
+
+  <h2 class="section">Projetos Selecionados</h2>
+
+  <div class="entry">
+    <div class="entry-row">
+      <span class="entry-title">AnalisaCV | Criador &amp; Desenvolvedor Único</span>
+      <span class="entry-date">No ar há 6 meses</span>
+    </div>
+    <p class="stack-line">HTML/CSS/JS &bull; Vercel Edge Functions &bull; Claude API (Anthropic) &bull; Mercado Pago (Pix)</p>
+    <ul>
+      <li>Desenvolvi uma aplicação serverless de análise de currículo, extraindo texto de PDF e gerando feedback estruturado (pontos fortes, fracos e sugestões de melhoria) via Claude AI.</li>
+      <li>Integrei gateway de pagamento Pix (Mercado Pago) para desbloquear a reescrita completa das seções do currículo, com fluxo de checkout, geração de QR Code e verificação de status de pagamento via API.</li>
+      <li>Arquitetei o backend inteiramente em funções serverless (Vercel Edge Functions), cobrindo análise via IA, geração e checagem de pagamento, sem servidor dedicado.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-row">
+      <span class="entry-title">DevTracker | Criador &amp; Desenvolvedor Único</span>
+      <span class="entry-date">Em desenvolvimento</span>
+    </div>
+    <p class="stack-line">Next.js &bull; Tailwind CSS &bull; TypeScript &bull; Node.js &bull; PostgreSQL &bull; Prisma (planejado)</p>
+    <ul>
+      <li>Desenvolvendo uma aplicação de acompanhamento de estudo/código com registro de sessões (tecnologia, tempo, data, nota), estatísticas agregadas (horas totais, streak, tecnologia mais estudada) e heatmap de atividade estilo GitHub.</li>
+      <li>Construindo a aba de sessões em Next.js/TypeScript, incluindo listagem, edição, exclusão e as estatísticas agregadas; persistência via PostgreSQL/Prisma planejada para a próxima etapa.</li>
+    </ul>
+  </div>
+
+  <h2 class="section">Habilidades Técnicas</h2>
+  <ul>
+    <li><span class="skills-label">Linguagens:</span> JavaScript, TypeScript</li>
+    <li><span class="skills-label">Frameworks &amp; Bibliotecas:</span> Next.js, Node.js, React, Tailwind CSS</li>
+    <li><span class="skills-label">Bancos de Dados:</span> SQL, PostgreSQL (em aprendizado via Prisma)</li>
+    <li><span class="skills-label">APIs &amp; IA:</span> Claude API (Anthropic), REST APIs, Mercado Pago (Pix)</li>
+    <li><span class="skills-label">Ferramentas de Desenvolvimento:</span> Git, GitHub, Vercel, VS Code, Visual Studio, npm</li>
+    <li><span class="skills-label">Produtividade & Design:</span> Figma, Adobe Photoshop, Adobe Illustrator, Canva, CorelDRAW</li>
+    <li><span class="skills-label">Línguas:</span> Português (Nativo), Inglês (Intermediário) </li>
+  </ul>
+
+  <h2 class="section">Educação</h2>
+  <div class="entry">
+    <p><span class="entry-place">Faculdade Infnet |</span> Rio de Janeiro, Brasil</p>
+    <p class="edu-degree">Bacharelado em Engenharia de Software</p>
+    <p>2026 – 2030 (Esperado)</p>
+  </div>
+
+  <h2 class="section">Certificados &amp; Treinamentos</h2>
+  <ul>
+    <li><span class="skills-label">Claude Code 101</span> — Anthropic Academy (2026)</li>
+  </ul>
+
+</body>
+</html>
