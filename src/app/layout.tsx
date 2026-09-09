@@ -7,6 +7,7 @@ import { MoonIcon } from "@heroicons/react/24/solid";
 import { Boldonse } from "next/font/google";
 import { ThemeToggle } from "../components/themeToggle";
 import { Roboto_Mono } from "next/font/google";
+import Script from "next/script";
 
 
 const boldonse = Boldonse({
@@ -41,14 +42,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="pt-br"
       data-theme="dark"
       suppressHydrationWarning
-      className={`${geistSans.variable} ${geistMono.variable} ${RobotoMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${RobotoMono.variable} antialiased`}
     >
       <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(){try{var m=window.matchMedia("(prefers-color-scheme: dark)").matches;document.documentElement.setAttribute("data-theme",m?"dark":"light")}catch(e){}})()`,
-          }}
-        />
+        <Script id="theme-init" strategy="beforeInteractive">
+          {`(function(){try{var m=window.matchMedia("(prefers-color-scheme: dark)").matches;document.documentElement.setAttribute("data-theme",m?"dark":"light")}catch(e){}})()`}
+        </Script>
       </head>
       <body>
         {/* Header */}
@@ -64,7 +63,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             <ThemeToggle />
           </div>
         </header>
-        <div className="overflow-x-hidden overflow-y-visible">
+        <div className="overflow-clip">
           {children}
         </div>
       </body>
