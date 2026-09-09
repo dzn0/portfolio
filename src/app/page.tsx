@@ -1,13 +1,20 @@
 import Image from "next/image";
+import Link from "next/link";
 import { BadgeCheck, Mail, ArrowRight } from "lucide-react"
-import { FaGithub, FaLinkedin, } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaHtml5, FaCcStripe } from "react-icons/fa";
+import { FaCss } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { RiNextjsFill } from "react-icons/ri";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { ChevronRightIcon, ArrowUpRightIcon } from "@heroicons/react/24/outline";
 import { FaNodeJs } from "react-icons/fa6";
 import { Roboto_Mono } from "next/font/google";
-
+import { IoLogoJavascript } from "react-icons/io5";
+import { BsClaude } from "react-icons/bs";
+import { SiMercadopago } from "react-icons/si";
+import { TbBrandVercelFilled } from "react-icons/tb";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { BiLogoTypescript } from "react-icons/bi";
 
 
 
@@ -46,15 +53,15 @@ export default function Home() {
       </div>
       {/* Personal description */}
       {/* Title */}
-      <div className="ml-4 mt flex-wrap text-2xl sm:text-3xl sm:ml-7 flex-col">
-        <span className="font-geist">Full-Stack Web Developer</span>
+      <div className="ml-4 mr-5 mt flex-wrap text-2xl sm:text-3xl sm:ml-7 flex-col">
+        <span className="font-geist text-2xl sm:text-3xl">Full-Stack Web Developer</span>
         <span className="text-2xl sm:text-3xl text-icons/75 font-thin font-geist"> — </span>
         <span className="text-2xl sm:text-3xl text-icons font-light">
-          Next.js &<br className="sm:hidden" /> Node.js
+          Next.js &<br className="hidden sm:hidden" /> Node.js
         </span>
       </div>
       {/* Description */}
-      <div className="mt-4 mr-2 sm:mt-3 sm:ml-7 ml-4 text-icons font-light leading-relaxed sm:leading-loose">
+      <div className="mt-4 mr-4 sm:mt-3 sm:ml-7 ml-4 text-icons font-light leading-relaxed sm:leading-loose">
         Sou um desenvolvedor web full-stack, construindo sites e sistemas backend com{" "}
         <span className="text-foreground inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full border border-foreground/30 bg-foreground/10 text-sm align-middle">
           <RiNextjsFill className="text-foreground" size={14} />
@@ -69,14 +76,14 @@ export default function Home() {
           <BiLogoPostgresql className="text-[#336791]" size={14} />
           PostgreSQL
         </span>
-        <span> com experiência de pagamento (Stripe/Pix) em produção. Construí o analisacv.com.br, uma plataforma de análise de currículo com IA em produção com pagamento real, e atualmente estou evoluindo o devtracker, um sistema de gestão de tarefas full-stack com autenticação e persistência em PostgreSQL.</span>
+        <span> com experiência em pagamento (Stripe/Pix). Construí o analisacv.com.br, uma plataforma de análise de currículo com IA em produção com pagamento real, e atualmente estou evoluindo o devtracker, um sistema de gestão de tarefas full-stack com autenticação e persistência em PostgreSQL.</span>
       </div>
       {/* View Resume */}
       <div className="mt-4 sm:mt-9 p-1 ml-3 sm:ml-6 w-fit">
         <a href="/André-Pieri-Currículo.pdf" target="_blank" rel="noopener noreferrer" className="px-7 flex items-center p-3 bg-foreground rounded-lg text text-background font-semibold transition transform duration-200 hover:scale-105 group">Ver Currículo <ChevronRightIcon strokeWidth={2.5} className="h-4 ml-2 w-4 transition transform duration-200 group-hover:translate-x-1" /></a>
       </div>
-      {/* Projects div */}
-      <div className="ml-6 mr-4 mt-20">
+      {/* Cards div */}
+      <div className="ml-4 mr-4 mt-20">
 
         {/* Featured build */}
         <div className="rounded-xl border border-project flex-col sm:flex flex-row gap-3">
@@ -92,7 +99,7 @@ export default function Home() {
           </div>
           <div className="sm:w-3/5">
             <div className="p-5">
-              <div className="flex gap-2 tracking-[3px] font-semibold text-muted scale-y-95">
+              <div className="flex gap-2 tracking-[3px] font-semibold text-icons scale-y-95">
                 <h2 className="font-[family-name:var(--font-roboto-mono)] text-xs">EM</h2>
                 <h2 className="font-[family-name:var(--font-roboto-mono)] text-xs">DESTAQUE</h2>
               </div>
@@ -108,12 +115,100 @@ export default function Home() {
               {/* Buttons */}
               <div className="mt-5 flex max-w-full gap-3 text-xs">
                 <a href="https://github.com/dzn0/analisa-cv" target="_blank" rel="noopener noreferrer" className="group transition transform duration-200 hover:scale-110 px-[10px] py-[8px] bg-foreground text-background font-semibold rounded-lg flex gap-3">Código
-                  <ArrowUpRightIcon className="h-5 w-5 group-hover:translate-x-1 transition transform duration-200"  />
+                  <ArrowUpRightIcon className="h-4 w-4 group-hover:translate-x-1 transition transform duration-200" />
                 </a>
                 <a href="https://www.analisacv.com.br/" target="_blank" rel="noopener noreferrer" className="group px-[10px] py-[8px] bg-foreground text-background font-semibold rounded-lg flex gap-3 transition transform duration-200 hover:scale-110">Produto
-                  <ArrowUpRightIcon className="h-5 w-5 transition transform duration-200 group-hover:translate-x-1" />
+                  <ArrowUpRightIcon className="h-4 w-4 transition transform duration-200 group-hover:translate-x-1" />
                 </a>
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Expecience */}
+        <div>
+          <div className="font-thin mt-15 text-3xl flex">
+            <span>Experiência</span>
+            <div className="ml-auto flex text-sm font-normal items-center text-[#99a0af] group hover:text-hover-muted">
+              <Link href="/">Ver Detalhes</Link>
+              <ChevronRightIcon strokeWidth={1.5} className="h-4 ml-1 w-4 transition transform duration-200 group-hover:translate-x-1" />
+            </div>
+          </div>
+          {/* Titles and Descriptions */}
+          <div className="mt-6">
+            <div className="flex flex-col sm:flex-row">
+              <div><span className="text-[#6a7282] font-medium text-xs">Abr 2024 – Jul 2025</span></div>
+              <div className="sm:ml-15 flex flex-col">
+                <span className="text-lg font-medium">Estagiário de Projetos</span>
+                <span className="text-icons font-medium text-sm">Oshiro Arquitetura</span>
+                <span className="text-sm text-icons/90">Mato Grosso do Sul, Brasil</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        {/* Projects First Grid*/}
+        <div className="font-thin mt-15 text-3xl flex items-center">
+          <span>Projetos</span>
+        </div>
+        <div className="sm:flex gap-10">
+          {/* AnalisaCV */}
+          <div className="border border-project p-3 flex flex-col rounded-xl mt-5 sm:flex-1">
+            <div className="flex justify-center border border-project rounded-xl bg-[#e0e0e0]">
+              <div>
+                <Image className="p-1 rounded-xl"
+                  src="/analisa-cv-screenshot.png"
+                  alt="Profile Picture"
+                  width={270}
+                  height={270}
+                />
+              </div>
+            </div>
+            <span className="text-lg font-medium mt-4">AnalisaCV</span>
+            <span className="text-icons font-medium text-sm">Criador & Desenvolvedor Único</span>
+            <span className="text-sm text-icons/90">Extrai currículos em PDF e gera feedback com IA, com checkout Pix integrado.</span>
+            <div className="mt-4 flex gap-2 items-center">
+              <span><FaHtml5 className="text-[#e44d24] hover:text-[#ff7a52] transition transform duration-200 hover:-translate-y-1" size={22} /></span>
+              <span><FaCss className="text-[#663399] hover:text-[#8f5ac9] transition transform duration-200 hover:-translate-y-1" size={22} /></span>
+              <span><IoLogoJavascript className="text-[#f7df1e] hover:text-[#fbe969] transition transform duration-200 hover:-translate-y-1" size={22} /></span>
+              <span><BsClaude className="text-[#d47255] hover:text-[#e39a83] transition transform duration-200 hover:-translate-y-1" size={22} /></span>
+              <span><SiMercadopago className="text-[#00bbfe] hover:text-[#5cd6ff] transition transform duration-200 hover:-translate-y-1" size={22} /></span>
+              <span><FaCcStripe className="text-[#6058f7] hover:text-[#9089fb] transition transform duration-200 hover:-translate-y-1" size={22} /></span>
+            </div>
+            <hr className="mt-4 text-project border-dashed"/>
+            <div className="flex items-center gap-2 mt-3 mb-1 ml-auto font-[family-name:var(--font-roboto-mono)] text-[11px] tracking-[2px]">
+              <a href="https://github.com/dzn0/analisa-cv" target="_blank" rel="noopener noreferrer" className="flex items-center group">CÓDIGO<ArrowUpRightIcon className="h-3 w-3 group-hover:translate-x-1 transition transform duration-200" /></a>
+              <a href="https://www.analisacv.com.br/" target="_blank" rel="noopener noreferrer" className="flex items-center group">PRODUTO<ArrowUpRightIcon className="h-3 w-3 group-hover:translate-x-1 transition transform duration-200" /></a>
+            </div>
+          </div>
+          {/* Devtracker */}
+          <div className="border border-project p-3 flex flex-col rounded-xl mt-5 sm:flex-1">
+            <div className="flex justify-center border border-project rounded-xl bg-[#e0e0e0]">
+              <div>
+                <Image className="p-1 rounded-xl"
+                  src="/devtracker.png"
+                  alt="Profile Picture"
+                  width={230}
+                  height={230}
+                />
+              </div>
+            </div>
+            <div className="flex mt-4 gap-1 items-center ">
+            <span className="text-lg font-medium">Devtracker</span>
+            <span className="italic text-icons/90">— Em desenvolvimento</span>
+            </div>
+            <span className="text-icons font-medium text-sm">Criador & Desenvolvedor Único</span>
+            <span className="text-sm text-icons/90">Registra sessões de estudo, com estatísticas agregadas e heatmap estilo GitHub.</span>
+            <div className="mt-4 flex gap-2 items-center">
+              <BiLogoTypescript className="text-[#3178c6] hover:text-[#6ba6e8] transition transform duration-200 hover:-translate-y-1" size={24}/>
+              <RiNextjsFill className="text-foreground transition transform duration-200 hover:-translate-y-1" size={22}/>
+              <RiTailwindCssFill className="text-[#38bdf8] hover:text-[#7dd3fc] transition transform duration-200 hover:-translate-y-1" size={22}/>
+              <FaNodeJs className="text-[#339933] hover:text-[#4dcc4d] transition transform duration-200 hover:-translate-y-1" size={22}/>
+            </div>
+            <hr className="mt-4 text-project border-dashed"/>
+            <div className="flex items-center gap-2 mt-3 mb-1 ml-auto font-[family-name:var(--font-roboto-mono)] text-[11px] tracking-[2px]">
+              <a href="https://github.com/dzn0/devtracker" target="_blank" rel="noopener noreferrer" className="flex items-center group">CÓDIGO<ArrowUpRightIcon className="h-3 w-3 group-hover:translate-x-1 transition transform duration-200" /></a>
+              {/* <a href="https://www.analisacv.com.br/" target="_blank" rel="noopener noreferrer" className="flex items-center group">PRODUTO<ArrowUpRightIcon className="h-3 w-3 group-hover:translate-x-1 transition transform duration-200" /></a> */}
             </div>
           </div>
         </div>

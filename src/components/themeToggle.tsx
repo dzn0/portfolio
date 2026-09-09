@@ -1,10 +1,18 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import { MoonIcon, SunIcon } from "@heroicons/react/24/solid";
 
 export function ThemeToggle() {
     const [theme, setTheme] = useState<"light" | "dark">("dark");
+
+    useLayoutEffect(() => {
+        const current = document.documentElement.getAttribute("data-theme");
+        if (current === "light" || current === "dark") {
+            setTheme(current);
+        }
+    }, []);
+
     const toggleTheme = () => {
         const next = theme === "dark" ? "light" : "dark";
 
@@ -22,11 +30,11 @@ export function ThemeToggle() {
     };
     return theme === "light" ? (
         <button onClick={toggleTheme} className="ml-3 mr-3 cursor-pointer">
-            <SunIcon className="h-4 w-4 text-muted hover:text-semi-muted transition duration-200 active:scale-70" />
+            <SunIcon className="h-5 w-5 sm:h-4 w-4  text-muted hover:text-hover-muted transition duration-200 active:scale-70" />
         </button>
     ) : (
         <button onClick={toggleTheme} className="ml-3 mr-3 cursor-pointer">
-            <MoonIcon className="h-4 w-4 text-muted hover:text-semi-muted transition duration-200 active:scale-70" />
+            <MoonIcon className="h-5 w-5 sm:h-4 w-4 text-muted hover:text-hover-muted transition duration-200 active:scale-70" />
         </button>
     )
 }

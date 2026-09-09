@@ -40,23 +40,33 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="pt-br"
       data-theme="dark"
-      className={`${geistSans.variable} ${geistMono.variable} ${RobotoMono.variable} h-full antialiased overflow-x-hidden`}
+      suppressHydrationWarning
+      className={`${geistSans.variable} ${geistMono.variable} ${RobotoMono.variable} h-full antialiased`}
     >
-      <body className="overflow-x-hidden">
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var m=window.matchMedia("(prefers-color-scheme: dark)").matches;document.documentElement.setAttribute("data-theme",m?"dark":"light")}catch(e){}})()`,
+          }}
+        />
+      </head>
+      <body>
         {/* Header */}
-        <header className="flex flex-shrink p-3 sm:p-3 border-b border-header-border">
+        <header className="flex flex-shrink p-3 sm:p-3 border-b border-header-border sticky top-0 z-50 bg-background/70 backdrop-blur-xl transform-gpu">
           {/* Everything inside header */}
           <div className="max-w-[720px] mx-auto flex gap-3 sm:gap-3 items-center w-full">
             <Link href="/" className="text-base sm:text-sm font-bold mr-auto transition hover:text-semi-muted">APP</Link>
-            <Link href="/" className="text-xs sm:text-sm text-muted hover:text-semi-muted transition-colors duration-200">Projetos</Link>
+            <Link href="/" className="text-xs sm:text-sm text-muted hover:text-hover-muted transition-colors duration-200">Projetos</Link>
             {/* Coming Soon */}
-            {/* <Link href="/" className="text-xs sm:text-sm text-muted hover:text-semi-muted transition-colors duration-200">Experiências</Link> */}
+            <Link href="/" className="text-xs sm:text-sm text-muted hover:text-hover-muted transition-colors duration-200">Experiência</Link>
             {/* <Link href="/" className="text-xs sm:text-sm mr-2 sm:mr-3 text-muted hover:text-semi-muted transition-colors duration-200">Certificados</Link> */}
             <span className="text-xl sm:text-2xl font-thin font-geist text-muted/40 cursor-default mb-1">|</span>
             <ThemeToggle />
           </div>
         </header>
-        {children}
+        <div className="overflow-x-hidden overflow-y-visible">
+          {children}
+        </div>
       </body>
     </html>
   );

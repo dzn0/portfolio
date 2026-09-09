@@ -8,11 +8,13 @@
   --pfp-border: #efefef;
   --muted: #abb1ba;
   --semi-muted: #dae3f0;
+  --hover-muted: #171717;
   --icons: #7a7c7e;
   color-scheme: dark;
 }
 
 :root[data-theme="dark"] {
+    --hover-muted: #ffffff;
     --project: #2e343d;
     --background: #121212;
     --foreground: #ededed;
@@ -23,6 +25,7 @@
 }
 
 @theme inline {
+  --color-hover-muted: var(--hover-muted);
   --color-project: var(--project);
   --color-pfp-border: var(--pfp-border);
   --color-icons: var(--icons);
