@@ -1,15 +1,20 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
   --header-border: #efefef;
   --project: #d9d9d9;
   --pfp-border: #efefef;
-  --muted: #abb1ba;
+  --muted: #959ba2;
   --semi-muted: #dae3f0;
   --hover-muted: #171717;
   --icons: #7a7c7e;
+  --card-bg: #ffffff;
+  --card-icon-bg: #eef1f5;
+  --label-accent: #9ca3af;
   color-scheme: dark;
 }
 
@@ -21,6 +26,9 @@
     --header-border: #1e2939;
     --pfp-border: #7a7c7e;
     --icons: #abb1ba;
+    --card-bg: #101626;
+    --card-icon-bg: #1d293d;
+    --label-accent: #6f9ec4;
     color-scheme: dark;
 }
 
@@ -34,6 +42,9 @@
   --color-header-border: var(--header-border);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-card-bg: var(--card-bg);
+  --color-card-icon-bg: var(--card-icon-bg);
+  --color-label-accent: var(--label-accent);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -66,4 +77,48 @@ body {
   to {
     clip-path: polygon(0% 0%, 156.25% 0%, 0% 277.78%);
   }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 100s linear infinite;
+}
+
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.themed-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--project) transparent;
+}
+
+.themed-scrollbar::-webkit-scrollbar {
+  height: 6px;
+}
+
+.themed-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.themed-scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--project);
+  border-radius: 999px;
+}
+
+.react-activity-calendar__count {
+  color: var(--muted);
 }

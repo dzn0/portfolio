@@ -67,6 +67,27 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           {children}
         </div>
       </body>
+      <footer className="max-w-[720px] mx-auto">
+        <hr className="mt-4 text-project border-dashed mt-15 max-w-[720px] mx-auto" />
+        <div>
+          <div className="mt-7 text-center sm:flex sm:items-center sm:justify-center sm:gap-4">
+            <div>
+              <span className="italic text-[#6a7282]">Repetindo até conseguir.</span>
+              <div className="flex justify-center gap-2 items-center mt-2">
+                <span className="text-foreground text-[13px]">André Pieri</span>
+                <span className="text-[#6a7282]/50">/</span>
+                <span className="text-foreground/50 text-[13px]">Mato Grosso do Sul, Brasil</span>
+              </div>
+            </div>
+            <div className="mt-2 sm:mt-0 flex text-[#6a7282] font-medium text-[14px] border border-project w-fit mx-auto sm:mx-0 rounded-3xl p-1 px-2 gap-1 border-dashed">
+              <span>Visitado por</span>
+              <span>x</span>
+              <span>pessoas</span>
+            </div>
+          </div>
+        </div>
+        <div className="mb-10"></div>
+      </footer>
     </html>
   );
 }

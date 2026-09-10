@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { BadgeCheck, Mail, ArrowRight } from "lucide-react"
+import { BadgeCheck, Mail, ArrowRight, X } from "lucide-react"
 import { FaGithub, FaLinkedin, FaHtml5, FaCcStripe } from "react-icons/fa";
 import { FaCss } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
@@ -12,10 +12,14 @@ import { Roboto_Mono } from "next/font/google";
 import { IoLogoJavascript } from "react-icons/io5";
 import { BsClaude } from "react-icons/bs";
 import { SiMercadopago } from "react-icons/si";
-import { TbBrandVercelFilled } from "react-icons/tb";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { BiLogoTypescript } from "react-icons/bi";
 import { RevealOnScreen } from "../components/revealOnScreen"
+import { SpotlightCard } from "../components/onMouseMove"
+import { TechSection } from "../components/TechSection"
+import { Lightbox } from "../components/Lightbox"
+import { GithubActivity } from "../components/GithubActivity"
+import { FaWhatsapp } from "react-icons/fa";
 
 
 export default function Home() {
@@ -61,7 +65,7 @@ export default function Home() {
         </span>
       </div>
       {/* Description */}
-      <div className="mt-4 mr-4 sm:mt-3 sm:ml-7 ml-4 text-icons font-light leading-relaxed sm:leading-loose">
+      <div className="mt-4 mr-4 sm:mt-3 sm:ml-7 ml-4 text-icons font-light leading-relaxed sm:leading-loose text-[18px]">
         Sou um desenvolvedor web full-stack, construindo sites e sistemas backend com{" "}
         <span className="text-foreground inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full border border-foreground/30 bg-foreground/10 text-sm align-middle">
           <RiNextjsFill className="text-foreground" size={14} />
@@ -142,7 +146,7 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row">
                 <div><span className="text-[#6a7282] font-medium text-xs">Abr 2024 – Jul 2025</span></div>
                 <div className="sm:ml-15 flex flex-col">
-                  <span className="text-lg font-medium">Estagiário de Projetos</span>
+                  <span className="text-lg font-medium">Estagiário Técnico em CAD</span>
                   <span className="text-icons font-medium text-sm">Oshiro Arquitetura</span>
                   <span className="text-sm text-icons/90">Mato Grosso do Sul, Brasil</span>
                 </div>
@@ -160,14 +164,14 @@ export default function Home() {
         <div className="sm:flex gap-6">
           <RevealOnScreen>
             {/* AnalisaCV */}
-            <div className="border border-project p-3 flex flex-col rounded-xl mt-5 sm:flex-1">
-              <div className="flex justify-center border border-project rounded-xl bg-[#e0e0e0]">
-                <div>
-                  <Image className="p-1 rounded-xl"
+            <SpotlightCard className="border border-project p-3 flex flex-col rounded-xl mt-5 sm:flex-1">
+              <div className="flex justify-center border border-project rounded-xl bg-[#e0e0e0] relative z-10 overflow-hidden">
+                <div className="">
+                  <Lightbox className="p-1 rounded-xl w-auto h-40 hover:scale-110 transition transform duration-200"
                     src="/analisa-cv-screenshot.png"
                     alt="Profile Picture"
-                    width={270}
-                    height={270}
+                    width={1920}
+                    height={1080}
                   />
                 </div>
               </div>
@@ -183,28 +187,30 @@ export default function Home() {
                 <span><FaCcStripe className="text-[#6058f7] hover:text-[#9089fb] transition transform duration-200 hover:-translate-y-1" size={22} /></span>
               </div>
               <hr className="mt-4 text-project border-dashed" />
-              <div className="flex text-muted items-center gap-2 mt-3 mb-1 ml-auto font-[family-name:var(--font-roboto-mono)] text-[11px] tracking-[2px]">
+              <div className="flex text-muted items-center gap-2 mt-3 mb-1 ml-auto font-[family-name:var(--font-roboto-mono)] text-[11px] tracking-[2px] scale-y-95">
                 <a href="https://github.com/dzn0/analisa-cv" target="_blank" rel="noopener noreferrer" className="flex items-center group hover:text-hover-muted">CÓDIGO<ArrowUpRightIcon className="h-3 w-3 group-hover:translate-x-1 transition transform duration-200" /></a>
                 <a href="https://www.analisacv.com.br/" target="_blank" rel="noopener noreferrer" className="flex items-center group hover:text-hover-muted">PRODUTO<ArrowUpRightIcon className="h-3 w-3 group-hover:translate-x-1 transition transform duration-200" /></a>
               </div>
-            </div>
+            </SpotlightCard>
           </RevealOnScreen>
           {/* Devtracker */}
           <RevealOnScreen>
-            <div className="border border-project p-3 flex flex-col rounded-xl mt-5 sm:flex-1">
-              <div className="flex justify-center border border-project rounded-xl bg-[#e0e0e0]">
+            <SpotlightCard className="border border-project p-3 flex flex-col rounded-xl mt-5 sm:flex-1">
+              <div className="flex justify-center border border-project rounded-xl bg-[#e0e0e0] relative z-10 overflow-hidden">
                 <div>
-                  <Image className="p-1 rounded-xl"
+                  <Lightbox className="p-1 rounded-xl w-auto h-40 hover:scale-110 transition transform duration-200"
                     src="/devtracker.png"
                     alt="Profile Picture"
-                    width={230}
-                    height={230}
+                    width={1920}
+                    height={1080}
                   />
                 </div>
               </div>
               <div className="flex mt-4 gap-1 items-center ">
                 <span className="text-lg font-medium">Devtracker</span>
-                <span className="italic text-icons/90">— Em desenvolvimento</span>
+                <div className="ml-2 font-medium text-[9px] scale-y-90 text-icons/90 bg-muted/15 border rounded-xl p-[2px] px-[5px] border-dashed">
+                  <span className="">EM DESENVOLVIMENTO</span>
+                </div>
               </div>
               <span className="text-icons font-medium text-sm">Criador & Desenvolvedor Único</span>
               <span className="text-sm text-icons/90">Registra sessões de estudo, com estatísticas agregadas e heatmap estilo GitHub.</span>
@@ -215,12 +221,104 @@ export default function Home() {
                 <FaNodeJs className="text-[#339933] hover:text-[#4dcc4d] transition transform duration-200 hover:-translate-y-1" size={22} />
               </div>
               <hr className="mt-4 text-project border-dashed" />
-              <div className="flex text-muted hover:text-hover-muted items-center gap-2 mt-3 mb-1 ml-auto font-[family-name:var(--font-roboto-mono)] text-[11px] tracking-[2px]">
+              <div className="flex text-muted hover:text-hover-muted items-center gap-2 mt-3 mb-1 ml-auto font-[family-name:var(--font-roboto-mono)] text-[11px] tracking-[2px] scale-y-95 ">
                 <a href="https://github.com/dzn0/devtracker" target="_blank" rel="noopener noreferrer" className="flex items-center group">CÓDIGO<ArrowUpRightIcon className="h-3 w-3 group-hover:translate-x-1 transition transform duration-200" /></a>
                 {/* <a href="https://www.analisacv.com.br/" target="_blank" rel="noopener noreferrer" className="flex items-center group">PRODUTO<ArrowUpRightIcon className="h-3 w-3 group-hover:translate-x-1 transition transform duration-200" /></a> */}
               </div>
-            </div>
+            </SpotlightCard>
           </RevealOnScreen>
+        </div>
+      </div>
+      {/* Tecnologies */}
+      <TechSection />
+      {/* Certifications */}
+      <RevealOnScreen>
+        <div>
+          <div className="font-thin mt-15 text-3xl flex ml-4">
+            <span>Certificados</span>
+          </div>
+          {/* Titles and Descriptions */}
+          <div className="mt-6 ml-4">
+            <div className="flex flex-col sm:flex-row">
+              <div><span className="text-[#6a7282] font-medium text-xs">Set 2026</span></div>
+              <div className="sm:ml-19 flex flex-col">
+                <span className="text-lg font-medium">Claude Academy: Claude Code 101</span>
+                <span className="text-sm text-icons/90">Anthropic</span>
+                <span className="text-sm text-[#6a7282]">Credential ID 363377d18212214294599fc711e35f1b</span>
+                <Lightbox className="mt-3 rounded border border-project transition transform duration-200 hover:scale-110 w-19 h-auto"
+                  src="/claude-code-101.png"
+                  alt="Profile Picture"
+                  width={3300}
+                  height={2250}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </RevealOnScreen>
+      {/* Education */}
+      <RevealOnScreen>
+        <div>
+          <div className="font-thin mt-15 text-3xl flex ml-4">
+            <span>Educação</span>
+          </div>
+          {/* Titles and Descriptions */}
+          <div className="mt-6 ml-4">
+            <div className="flex flex-col sm:flex-row">
+              <div><span className="text-[#6a7282] font-medium text-xs">2026 - 2030</span></div>
+              <div className="sm:ml-15 flex flex-col">
+                <span className="text-lg font-medium">Bacharelado em Engenharia de Software</span>
+                <span className="text-sm text-icons/90">Faculdade Infnet</span>
+                <span className="text-sm text-icons/90">Rio de Janeiro, Brasil</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </RevealOnScreen>
+      {/* GitHub Activity */}
+      <RevealOnScreen>
+        <div>
+          <div className="font-thin mt-15 text-3xl flex ml-4">
+            <span>GitHub Activity</span>
+          </div>
+          <div className="mt-6 ml-4 mr-4">
+            <GithubActivity username="dzn0" />
+          </div>
+        </div>
+      </RevealOnScreen>
+      <div>
+        <div className="font-thin mt-15 text-3xl flex flex-col ml-4">
+          {/* Lets Work Together */}
+          <span>Vamos trabalhar juntos.</span>
+          <div className="flex flex-col sm:flex-row">
+            <div className="mt-5 text-[15px] sm:text-[17px] font-[390] text-[#99a1aa] font leading-relaxed">
+              <span className="">Disponível para vagas full-stack, freelas e parcerias. Construo sistemas completos<br className="hidden sm:inline" /> do zero — frontend, backend e banco de dados, incluindo integração de <br className="hidden sm:inline" />pagamentos e automações com IA.</span>
+            </div>
+            {/* Email */}
+            <div className="mr-4 mt-5 flex flex-col gap-3">
+              <a href="mailto:andrepereirapieri@gmail.com" className="bg-card-bg p-3 rounded-2xl border border-project flex items-center gap-3 hover:scale-102 dark:hover:brightness-125 transition transform duration-200">
+                <div className="bg-card-icon-bg p-3 rounded-2xl">
+                  <MdEmail size={24} />
+                </div>
+                <div className="text-[16px] font-[390] flex flex-col">
+                  <span className="text-[11px] font-bold scale-y-98 tracking-widest text-label-accent">EMAIL</span>
+                  <span>andrepereirapieri@gmail.com</span>
+                </div>
+                <ChevronRightIcon className="h-auto w-4 ml-auto mr-3" />
+              </a>
+              {/* Whatsapp */}
+              <a href="https://wa.me/5567996115591" target="_blank" rel="noopener noreferrer" className="bg-card-bg p-3 rounded-2xl border border-project flex items-center gap-3 hover:scale-102 dark:hover:brightness-125 transition transform duration-200">
+                <div className="bg-card-icon-bg p-3 rounded-2xl">
+                  <FaWhatsapp size={24} />
+                </div>
+                <div className="text-[16px] font-[390] flex flex-col">
+                  <span className="text-[11px] font-bold scale-y-98 tracking-widest text-label-accent">TELEFONE</span>
+                  <span>(67) 99611-5591</span>
+                </div>
+                <ChevronRightIcon className="h-auto w-4 ml-auto mr-3" />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
