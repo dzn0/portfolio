@@ -20,6 +20,7 @@ import { TechSection } from "../components/TechSection"
 import { Lightbox } from "../components/Lightbox"
 import { GithubActivity } from "../components/GithubActivity"
 import { FaWhatsapp } from "react-icons/fa";
+import { SiPrisma } from "react-icons/si";
 
 
 export default function Home() {
@@ -133,12 +134,12 @@ export default function Home() {
 
         {/* Expecience */}
         <RevealOnScreen>
-          <div>
+          <div id="experiencia" className="scroll-mt-24">
             <div className="font-thin mt-15 text-3xl flex">
               <span>Experiência</span>
               <div className="ml-auto flex text-sm font-normal items-center text-[#99a0af] group hover:text-hover-muted">
-                <Link href="/">Ver Detalhes</Link>
-                <ChevronRightIcon strokeWidth={1.5} className="h-4 ml-1 w-4 transition transform duration-200 group-hover:translate-x-1" />
+                {/* <Link href="/">Ver Detalhes</Link>
+                <ChevronRightIcon strokeWidth={1.5} className="h-4 ml-1 w-4 transition transform duration-200 group-hover:translate-x-1" /> */}
               </div>
             </div>
             {/* Titles and Descriptions */}
@@ -157,14 +158,14 @@ export default function Home() {
         </RevealOnScreen>
         {/* Projects First Grid*/}
         <RevealOnScreen>
-          <div className="font-thin mt-15 text-3xl flex items-center">
+          <div id="projetos" className="font-thin mt-15 text-3xl flex items-center scroll-mt-24">
             <span>Projetos</span>
           </div>
         </RevealOnScreen>
-        <div className="sm:flex gap-6">
-          <RevealOnScreen>
+        <div className="flex flex-col items-center md:flex-row md:flex-wrap md:justify-center gap-6">
+          <RevealOnScreen className="md:flex-none md:basis-[calc(50%-12px)]">
             {/* AnalisaCV */}
-            <SpotlightCard className="border border-project p-3 flex flex-col rounded-xl mt-5 sm:flex-1">
+            <SpotlightCard className="border border-project p-3 flex flex-col rounded-xl mt-5 h-full">
               <div className="flex justify-center border border-project rounded-xl bg-[#e0e0e0] relative z-10 overflow-hidden">
                 <div className="">
                   <Lightbox className="p-1 rounded-xl w-auto h-40 hover:scale-110 transition transform duration-200"
@@ -193,9 +194,41 @@ export default function Home() {
               </div>
             </SpotlightCard>
           </RevealOnScreen>
+          {/* Portfólio Pessoal */}
+          <RevealOnScreen className="md:flex-none md:basis-[calc(50%-12px)]">
+            <SpotlightCard className="border border-project p-3 flex flex-col rounded-xl mt-5 h-full">
+              <div className="flex justify-center border border-project rounded-xl bg-[#e0e0e0] relative z-10 overflow-hidden">
+                <div>
+                  <Lightbox className="p-1 rounded-xl w-auto h-40 hover:scale-110 transition transform duration-200"
+                    src="/portfolio.png"
+                    alt="Profile Picture"
+                    width={1920}
+                    height={1080}
+                  />
+                </div>
+              </div>
+              <div className="flex mt-4 gap-1 items-center ">
+                <span className="text-lg font-medium">Portfólio Pessoal</span>
+              </div>
+              <span className="text-icons font-medium text-sm">Criador & Desenvolvedor Único</span>
+              <span className="text-sm text-icons/90">Site full-stack com backend próprio em Node.js e Prisma, com contador de visitantes em tempo real.</span>
+              <div className="mt-4 flex gap-2 items-center">
+                <BiLogoTypescript className="text-[#3178c6] hover:text-[#6ba6e8] transition transform duration-200 hover:-translate-y-1" size={24} />
+                <RiNextjsFill className="text-foreground transition transform duration-200 hover:-translate-y-1" size={22} />
+                <RiTailwindCssFill className="text-[#38bdf8] hover:text-[#7dd3fc] transition transform duration-200 hover:-translate-y-1" size={22} />
+                <FaNodeJs className="text-[#339933] hover:text-[#4dcc4d] transition transform duration-200 hover:-translate-y-1" size={22} />
+                <SiPrisma className="text-foreground transition transform duration-200 hover:-translate-y-1" size={22} />
+              </div>
+              <hr className="mt-4 text-project border-dashed" />
+              <div className="flex text-muted items-center gap-2 mt-3 mb-1 ml-auto font-[family-name:var(--font-roboto-mono)] text-[11px] tracking-[2px] scale-y-95 ">
+                <a href="https://github.com/dzn0/portfolio" target="_blank" rel="noopener noreferrer" className="flex items-center group hover:text-hover-muted">CÓDIGO<ArrowUpRightIcon className="h-3 w-3 group-hover:translate-x-1 transition transform duration-200" /></a>
+                <a href="https://andrepieri.vercel.app/" target="_blank" rel="noopener noreferrer" className="flex items-center group hover:text-hover-muted">PRODUTO<ArrowUpRightIcon className="h-3 w-3 group-hover:translate-x-1 transition transform duration-200" /></a>
+              </div>
+            </SpotlightCard>
+          </RevealOnScreen>
           {/* Devtracker */}
-          <RevealOnScreen>
-            <SpotlightCard className="border border-project p-3 flex flex-col rounded-xl mt-5 sm:flex-1">
+          <RevealOnScreen className="md:flex-none md:basis-[calc(50%-12px)]">
+            <SpotlightCard className="border border-project p-3 flex flex-col rounded-xl mt-5 h-full">
               <div className="flex justify-center border border-project rounded-xl bg-[#e0e0e0] relative z-10 overflow-hidden">
                 <div>
                   <Lightbox className="p-1 rounded-xl w-auto h-40 hover:scale-110 transition transform duration-200"
@@ -221,9 +254,9 @@ export default function Home() {
                 <FaNodeJs className="text-[#339933] hover:text-[#4dcc4d] transition transform duration-200 hover:-translate-y-1" size={22} />
               </div>
               <hr className="mt-4 text-project border-dashed" />
-              <div className="flex text-muted hover:text-hover-muted items-center gap-2 mt-3 mb-1 ml-auto font-[family-name:var(--font-roboto-mono)] text-[11px] tracking-[2px] scale-y-95 ">
-                <a href="https://github.com/dzn0/devtracker" target="_blank" rel="noopener noreferrer" className="flex items-center group">CÓDIGO<ArrowUpRightIcon className="h-3 w-3 group-hover:translate-x-1 transition transform duration-200" /></a>
-                {/* <a href="https://www.analisacv.com.br/" target="_blank" rel="noopener noreferrer" className="flex items-center group">PRODUTO<ArrowUpRightIcon className="h-3 w-3 group-hover:translate-x-1 transition transform duration-200" /></a> */}
+              <div className="flex text-muted items-center gap-2 mt-3 mb-1 ml-auto font-[family-name:var(--font-roboto-mono)] text-[11px] tracking-[2px] scale-y-95 ">
+                <a href="https://github.com/dzn0/devtracker" target="_blank" rel="noopener noreferrer" className="flex items-center group hover:text-hover-muted">CÓDIGO<ArrowUpRightIcon className="h-3 w-3 group-hover:translate-x-1 transition transform duration-200" /></a>
+                {/* <a href="https://www.analisacv.com.br/" target="_blank" rel="noopener noreferrer" className="flex items-center group hover:text-hover-muted">PRODUTO<ArrowUpRightIcon className="h-3 w-3 group-hover:translate-x-1 transition transform duration-200" /></a> */}
               </div>
             </SpotlightCard>
           </RevealOnScreen>
@@ -289,36 +322,38 @@ export default function Home() {
       <div>
         <div className="font-thin mt-15 text-3xl flex flex-col ml-4">
           {/* Lets Work Together */}
-          <span>Vamos trabalhar juntos.</span>
-          <div className="flex flex-col sm:flex-row">
-            <div className="mt-5 text-[15px] sm:text-[17px] font-[390] text-[#99a1aa] font leading-relaxed">
-              <span className="">Disponível para vagas full-stack, freelas e parcerias. Construo sistemas completos<br className="hidden sm:inline" /> do zero — frontend, backend e banco de dados, incluindo integração de <br className="hidden sm:inline" />pagamentos e automações com IA.</span>
+          <RevealOnScreen>
+            <span>Vamos trabalhar juntos.</span>
+            <div className="flex flex-col sm:flex-row">
+              <div className="mt-5 text-[15px] sm:text-[17px] font-[390] text-[#99a1aa] font leading-relaxed">
+                <span className="">Disponível para vagas full-stack, freelas e parcerias. Construo sistemas completos<br className="hidden sm:inline" /> do zero — frontend, backend e banco de dados, incluindo integração de <br className="hidden sm:inline" />pagamentos e automações com IA.</span>
+              </div>
+              {/* Email */}
+              <div className="mr-4 mt-5 flex flex-col gap-3">
+                <a href="mailto:andrepereirapieri@gmail.com" className="bg-card-bg p-3 rounded-2xl border border-project flex items-center gap-3 hover:scale-102 dark:hover:brightness-125 transition transform duration-200">
+                  <div className="bg-card-icon-bg p-3 rounded-2xl">
+                    <MdEmail size={24} />
+                  </div>
+                  <div className="text-[16px] font-[390] flex flex-col">
+                    <span className="text-[11px] font-bold scale-y-98 tracking-widest text-label-accent">EMAIL</span>
+                    <span>andrepereirapieri@gmail.com</span>
+                  </div>
+                  <ChevronRightIcon className="h-auto w-4 ml-auto mr-3" />
+                </a>
+                {/* Whatsapp */}
+                <a href="https://wa.me/5567996115591" target="_blank" rel="noopener noreferrer" className="bg-card-bg p-3 rounded-2xl border border-project flex items-center gap-3 hover:scale-102 dark:hover:brightness-125 transition transform duration-200">
+                  <div className="bg-card-icon-bg p-3 rounded-2xl">
+                    <FaWhatsapp size={24} />
+                  </div>
+                  <div className="text-[16px] font-[390] flex flex-col">
+                    <span className="text-[11px] font-bold scale-y-98 tracking-widest text-label-accent">TELEFONE</span>
+                    <span>67 99611-5591</span>
+                  </div>
+                  <ChevronRightIcon className="h-auto w-4 ml-auto mr-3" />
+                </a>
+              </div>
             </div>
-            {/* Email */}
-            <div className="mr-4 mt-5 flex flex-col gap-3">
-              <a href="mailto:andrepereirapieri@gmail.com" className="bg-card-bg p-3 rounded-2xl border border-project flex items-center gap-3 hover:scale-102 dark:hover:brightness-125 transition transform duration-200">
-                <div className="bg-card-icon-bg p-3 rounded-2xl">
-                  <MdEmail size={24} />
-                </div>
-                <div className="text-[16px] font-[390] flex flex-col">
-                  <span className="text-[11px] font-bold scale-y-98 tracking-widest text-label-accent">EMAIL</span>
-                  <span>andrepereirapieri@gmail.com</span>
-                </div>
-                <ChevronRightIcon className="h-auto w-4 ml-auto mr-3" />
-              </a>
-              {/* Whatsapp */}
-              <a href="https://wa.me/5567996115591" target="_blank" rel="noopener noreferrer" className="bg-card-bg p-3 rounded-2xl border border-project flex items-center gap-3 hover:scale-102 dark:hover:brightness-125 transition transform duration-200">
-                <div className="bg-card-icon-bg p-3 rounded-2xl">
-                  <FaWhatsapp size={24} />
-                </div>
-                <div className="text-[16px] font-[390] flex flex-col">
-                  <span className="text-[11px] font-bold scale-y-98 tracking-widest text-label-accent">TELEFONE</span>
-                  <span>(67) 99611-5591</span>
-                </div>
-                <ChevronRightIcon className="h-auto w-4 ml-auto mr-3" />
-              </a>
-            </div>
-          </div>
+          </RevealOnScreen>
         </div>
       </div>
     </div>

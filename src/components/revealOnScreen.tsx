@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-export function RevealOnScreen({ children }: { children: React.ReactNode }) {
+export function RevealOnScreen({ children, className }: { children: React.ReactNode; className?: string }) {
     const ref = useRef<HTMLDivElement>(null);
     const [visible, setVisible] = useState<boolean>(false);
 
@@ -22,7 +22,7 @@ export function RevealOnScreen({ children }: { children: React.ReactNode }) {
 
     return <div
         ref={ref}
-        className={`transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
+        className={`transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"} ${className ?? ""}`}
     >
         {children}
     </div>

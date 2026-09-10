@@ -6,6 +6,7 @@ import { Sun, Moon } from "lucide-react"
 import { MoonIcon } from "@heroicons/react/24/solid";
 import { Boldonse } from "next/font/google";
 import { ThemeToggle } from "../components/themeToggle";
+import { VisitCount } from "../components/VisitCount";
 import { Roboto_Mono } from "next/font/google";
 import Script from "next/script";
 
@@ -55,9 +56,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           {/* Everything inside header */}
           <div className="max-w-[720px] mx-auto flex gap-3 sm:gap-3 items-center w-full">
             <Link href="/" className="text-base sm:text-sm font-bold mr-auto transition hover:text-semi-muted">APP</Link>
-            <Link href="/" className="text-xs sm:text-sm text-muted hover:text-hover-muted transition-colors duration-200">Projetos</Link>
-            {/* Coming Soon */}
-            <Link href="/" className="text-xs sm:text-sm text-muted hover:text-hover-muted transition-colors duration-200">Experiência</Link>
+            <Link href="/#projetos" className="text-xs sm:text-sm text-muted hover:text-hover-muted transition-colors duration-200">Projetos</Link>
+            <Link href="/#experiencia" className="text-xs sm:text-sm text-muted hover:text-hover-muted transition-colors duration-200">Experiência</Link>
             {/* <Link href="/" className="text-xs sm:text-sm mr-2 sm:mr-3 text-muted hover:text-semi-muted transition-colors duration-200">Certificados</Link> */}
             <span className="text-xl sm:text-2xl font-thin font-geist text-muted/40 cursor-default mb-1">|</span>
             <ThemeToggle />
@@ -66,8 +66,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <div className="overflow-clip">
           {children}
         </div>
-      </body>
-      <footer className="max-w-[720px] mx-auto">
+        <footer className="max-w-[720px] mx-auto">
         <hr className="mt-4 text-project border-dashed mt-15 max-w-[720px] mx-auto" />
         <div>
           <div className="mt-7 text-center sm:flex sm:items-center sm:justify-center sm:gap-4">
@@ -81,13 +80,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             </div>
             <div className="mt-2 sm:mt-0 flex text-[#6a7282] font-medium text-[14px] border border-project w-fit mx-auto sm:mx-0 rounded-3xl p-1 px-2 gap-1 border-dashed">
               <span>Visitado por</span>
-              <span>x</span>
+              <VisitCount />
               <span>pessoas</span>
             </div>
           </div>
         </div>
         <div className="mb-10"></div>
-      </footer>
+        </footer>
+      </body>
     </html>
   );
 }

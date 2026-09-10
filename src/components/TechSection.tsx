@@ -103,8 +103,8 @@ export function TechSection() {
             {view === "marquee" ? <Grid2x2 size={16} /> : <Layers size={16} />}
           </button>
           <Link href="/" className="flex text-sm font-normal items-center text-[#99a0af] group hover:text-hover-muted">
-            Ver tudo
-            <ChevronRightIcon strokeWidth={1.5} className="h-4 ml-1 w-4 transition transform duration-200 group-hover:translate-x-1" />
+            {/* Ver tudo
+            <ChevronRightIcon strokeWidth={1.5} className="h-4 ml-1 w-4 transition transform duration-200 group-hover:translate-x-1" /> */}
           </Link>
         </div>
       </RevealOnScreen>
