@@ -228,7 +228,7 @@ export default function Home() {
           </RevealOnScreen>
           {/* Devtracker */}
           <RevealOnScreen className="md:flex-none md:basis-[calc(50%-12px)]">
-            <SpotlightCard className="border border-project p-3 flex flex-col rounded-xl mt-5 h-full">
+            <SpotlightCard className="border border-project p-3 flex flex-col rounded-xl h-full">
               <div className="flex justify-center border border-project rounded-xl bg-[#e0e0e0] relative z-10 overflow-hidden">
                 <div>
                   <Lightbox className="p-1 rounded-xl w-auto h-40 hover:scale-110 transition transform duration-200"
