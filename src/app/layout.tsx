@@ -56,9 +56,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           {/* Everything inside header */}
           <div className="max-w-[720px] mx-auto flex gap-3 sm:gap-3 items-center w-full">
             <Link href="/" className="text-base sm:text-sm font-bold mr-auto transition hover:text-semi-muted">APP</Link>
-            <Link href="/#projetos" className="text-xs sm:text-sm text-muted hover:text-hover-muted transition-colors duration-200">Projetos</Link>
-            <Link href="/#experiencia" className="text-xs sm:text-sm text-muted hover:text-hover-muted transition-colors duration-200">Experiência</Link>
-            {/* <Link href="/" className="text-xs sm:text-sm mr-2 sm:mr-3 text-muted hover:text-semi-muted transition-colors duration-200">Certificados</Link> */}
+            <Link href="/projects" className="text-xs sm:text-sm text-muted hover:text-hover-muted transition-colors duration-200">Projetos</Link>
+            <Link href="/experience" className="text-xs sm:text-sm text-muted hover:text-hover-muted transition-colors duration-200">Experiência</Link>
+            <Link href="/technologies" className="text-xs sm:text-sm mr-2 sm:mr-3 text-muted hover:text-semi-muted transition-colors duration-200">Tecnologias</Link>
             <span className="text-xl sm:text-2xl font-thin font-geist text-muted/40 cursor-default mb-1">|</span>
             <ThemeToggle />
           </div>
@@ -66,7 +66,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <div className="overflow-clip">
           {children}
         </div>
-        <footer className="max-w-[720px] mx-auto">
+        <footer className="max-w-[720px] mx-4 sm:mx-auto">
         <hr className="mt-4 text-project border-dashed mt-15 max-w-[720px] mx-auto" />
         <div>
           <div className="mt-7 text-center sm:flex sm:items-center sm:justify-center sm:gap-4">

@@ -49,7 +49,7 @@ const tools = [
 
 function Badge({ item }: { item: (typeof frontend)[number] }) {
   return (
-    <span className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full border ${item.border} ${item.bg} text-sm whitespace-nowrap`}>
+    <span className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full border ${item.border} ${item.bg} text-sm whitespace-nowrap cursor-default transition transform duration-200 hover:scale-110`}>
       {item.icon}
       {item.label}
     </span>
@@ -102,9 +102,9 @@ export function TechSection() {
           >
             {view === "marquee" ? <Grid2x2 size={16} /> : <Layers size={16} />}
           </button>
-          <Link href="/" className="flex text-sm font-normal items-center text-[#99a0af] group hover:text-hover-muted">
-            {/* Ver tudo
-            <ChevronRightIcon strokeWidth={1.5} className="h-4 ml-1 w-4 transition transform duration-200 group-hover:translate-x-1" /> */}
+          <Link href="/technologies" className="flex text-sm font-normal items-center text-[#99a0af] group hover:text-hover-muted">
+            Ver tudo
+            <ChevronRightIcon strokeWidth={1.5} className="h-4 ml-1 w-4 transition transform duration-200 group-hover:translate-x-1" />
           </Link>
         </div>
       </RevealOnScreen>

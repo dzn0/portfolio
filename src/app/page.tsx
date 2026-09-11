@@ -132,14 +132,14 @@ export default function Home() {
           </div>
         </RevealOnScreen>
 
-        {/* Expecience */}
+        {/* Experience */}
         <RevealOnScreen>
           <div id="experiencia" className="scroll-mt-24">
             <div className="font-thin mt-15 text-3xl flex">
               <span>Experiência</span>
               <div className="ml-auto flex text-sm font-normal items-center text-[#99a0af] group hover:text-hover-muted">
-                {/* <Link href="/">Ver Detalhes</Link>
-                <ChevronRightIcon strokeWidth={1.5} className="h-4 ml-1 w-4 transition transform duration-200 group-hover:translate-x-1" /> */}
+                <Link href="/experience">Ver Detalhes</Link>
+                <ChevronRightIcon strokeWidth={1.5} className="h-4 ml-1 w-4 transition transform duration-200 group-hover:translate-x-1" />
               </div>
             </div>
             {/* Titles and Descriptions */}
@@ -160,6 +160,10 @@ export default function Home() {
         <RevealOnScreen>
           <div id="projetos" className="font-thin mt-15 text-3xl flex items-center scroll-mt-24">
             <span>Projetos</span>
+            <div className="ml-auto flex text-sm font-normal items-center text-[#99a0af] group hover:text-hover-muted">
+              <Link href="/projects">Ver Detalhes</Link>
+              <ChevronRightIcon strokeWidth={1.5} className="h-4 ml-1 w-4 transition transform duration-200 group-hover:translate-x-1" />
+            </div>
           </div>
         </RevealOnScreen>
         <div className="flex flex-col items-center md:flex-row md:flex-wrap md:justify-center gap-6">
@@ -196,7 +200,7 @@ export default function Home() {
           </RevealOnScreen>
           {/* Portfólio Pessoal */}
           <RevealOnScreen className="md:flex-none md:basis-[calc(50%-12px)]">
-            <SpotlightCard className="border border-project p-3 flex flex-col rounded-xl mt-5 h-full">
+            <SpotlightCard className="border border-project p-3 flex flex-col rounded-xl h-full mt-5">
               <div className="flex justify-center border border-project rounded-xl bg-[#e0e0e0] relative z-10 overflow-hidden">
                 <div>
                   <Lightbox className="p-1 rounded-xl w-auto h-40 hover:scale-110 transition transform duration-200"
