@@ -222,7 +222,7 @@ export default function Home() {
               <hr className="mt-4 text-project border-dashed" />
               <div className="flex text-muted items-center gap-2 mt-3 mb-1 ml-auto font-[family-name:var(--font-roboto-mono)] text-[11px] tracking-[2px] scale-y-95 ">
                 <a href="https://github.com/dzn0/portfolio" target="_blank" rel="noopener noreferrer" className="flex items-center group hover:text-hover-muted">CÓDIGO<ArrowUpRightIcon className="h-3 w-3 group-hover:translate-x-1 transition transform duration-200" /></a>
-                <a href="https://andrepieri.vercel.app/" target="_blank" rel="noopener noreferrer" className="flex items-center group hover:text-hover-muted">PRODUTO<ArrowUpRightIcon className="h-3 w-3 group-hover:translate-x-1 transition transform duration-200" /></a>
+                <a href="https://andrepieri-andrepereirapieri-3671s-projects.vercel.app/" target="_blank" rel="noopener noreferrer" className="flex items-center group hover:text-hover-muted">PRODUTO<ArrowUpRightIcon className="h-3 w-3 group-hover:translate-x-1 transition transform duration-200" /></a>
               </div>
             </SpotlightCard>
           </RevealOnScreen>
