@@ -132,8 +132,22 @@
 
   <div class="entry">
     <div class="entry-row">
+      <span class="entry-title">Pagefy | Criador &amp; Desenvolvedor Único</span>
+      <span class="entry-date">Em produção</span>
+    </div>
+    <p class="stack-line">Next.js &bull; React &bull; TypeScript &bull; Node.js/Express &bull; PostgreSQL/Prisma &bull; Claude API (Anthropic) &bull; Google Places API &bull; Asaas (Pix e cartão)</p>
+    <ul>
+      <li>Desenvolvi um SaaS que prospecta comércios locais sem site: a busca consulta a <strong>Google Places API</strong> por cidade e ramo, filtra quem não tem site ou está fora do raio de atuação e mantém cache compartilhado de 6h, eliminando o custo de consultas repetidas.</li>
+      <li>Integrei a <strong>Claude API (Anthropic)</strong> para gerar o site completo de cada negócio a partir dos dados reais do Google; substituir um agente com ferramentas por uma chamada única reduziu o custo por site de ~US$ 1,30 para ~US$ 0,50, mantendo a qualidade.</li>
+      <li>Implementei checkout próprio com <strong>Pix (QR Code com polling e webhook)</strong> e cartão recorrente via Asaas, sobre um sistema de créditos com reserva antecipada, devolução automática em falhas e estornos idempotentes com lock transacional.</li>
+      <li>Blindei o HTML gerado por IA removendo scripts, trackers e redirecionamentos antes da publicação, servindo a página pública sob <strong>CSP estrita</strong>; autenticação via Google OAuth com cookie HttpOnly assinado em HMAC, sem tabela de sessão.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-row">
       <span class="entry-title">AnalisaCV | Criador &amp; Desenvolvedor Único</span>
-      <span class="entry-date">No ar há 6 meses</span>
+      <span class="entry-date">Em produção</span>
     </div>
     <p class="stack-line">HTML/CSS/JS &bull; Vercel Edge Functions &bull; Claude API (Anthropic) &bull; Mercado Pago (Pix)</p>
     <ul>
@@ -146,7 +160,7 @@
   <div class="entry">
     <div class="entry-row">
       <span class="entry-title">Portfólio Pessoal | Criador &amp; Desenvolvedor Único</span>
-      <span class="entry-date">No ar há 1 mês</span>
+      <span class="entry-date">Em produção</span>
     </div>
     <p class="stack-line">Next.js &bull; TypeScript &bull; Tailwind CSS &bull; Node.js &bull; Express &bull; Prisma &bull; PostgreSQL</p>
     <ul>
@@ -155,24 +169,12 @@
     </ul>
   </div>
 
-  <div class="entry">
-    <div class="entry-row">
-      <span class="entry-title">DevTracker | Criador &amp; Desenvolvedor Único</span>
-      <span class="entry-date">Em desenvolvimento</span>
-    </div>
-    <p class="stack-line">Next.js &bull; Tailwind CSS &bull; TypeScript &bull; Node.js &bull; PostgreSQL &bull; Prisma</p>
-    <ul>
-      <li>Desenvolvendo uma aplicação de acompanhamento de estudo/código com registro de sessões (tecnologia, tempo, data, nota), estatísticas agregadas (horas totais, streak, tecnologia mais estudada) e heatmap de atividade estilo GitHub.</li>
-      <li>Construindo a aba de sessões em Next.js/TypeScript, incluindo listagem, edição, exclusão e as estatísticas agregadas; persistência via PostgreSQL/Prisma planejada para a próxima etapa.</li>
-    </ul>
-  </div>
-
   <h2 class="section">Habilidades Técnicas</h2>
   <ul>
     <li><span class="skills-label">Linguagens:</span> JavaScript, TypeScript</li>
     <li><span class="skills-label">Frameworks &amp; Bibliotecas:</span> Next.js, Node.js, React, Tailwind CSS</li>
     <li><span class="skills-label">Bancos de Dados:</span> SQL, PostgreSQL, Prisma</li>
-    <li><span class="skills-label">APIs &amp; IA:</span> Claude API (Anthropic), REST APIs, Mercado Pago (Pix)</li>
+    <li><span class="skills-label">APIs &amp; IA:</span> Claude API (Anthropic), Google Places API, Google OAuth, REST APIs, Asaas (Pix e cartão), Mercado Pago (Pix)</li>
     <li><span class="skills-label">Ferramentas de Desenvolvimento:</span> Git, GitHub, Vercel, VS Code, Visual Studio, npm</li>
     <li><span class="skills-label">Produtividade & Design:</span> Figma, Adobe Photoshop, Adobe Illustrator, Canva, CorelDRAW</li>
     <li><span class="skills-label">Línguas:</span> Português (Nativo), Inglês (Intermediário) </li>

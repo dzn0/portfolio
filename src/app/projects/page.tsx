@@ -25,8 +25,67 @@ export default function Projects() {
                     <span className="mt-1 text-muted text-[18px]">O que já construí, com detalhes técnicos.</span>
                 </div>
 
-                {/* Portfólio Pessoal */}
+                {/* Pagefy */}
                 <div className="flex gap-4 mt-8">
+                    <div className="flex flex-col items-center">
+                        <span className="w-3 h-3 rounded-full bg-foreground mt-1.5 shrink-0" />
+                        <span className="w-0.5 flex-1 bg-muted mt-1" />
+                    </div>
+                    <div className="pb-10">
+                        <span className="text-xs text-muted">Em produção</span>
+                        <h3 className="text-lg font-medium">Pagefy: sites prontos pra vender a comércios locais.</h3>
+                        <Lightbox className="mt-3 rounded border border-project transition transform duration-200 hover:scale-110 w-19 h-auto"
+                            src="/pagefy-screenshot.png"
+                            alt="Pagefy"
+                            width={2557}
+                            height={1194}
+                        />
+                        <p className="mt-2 text-sm text-icons/90">
+                            Um SaaS pra quem vende sites a comércios locais: busca numa cidade os negócios que não têm site no perfil do Google, gera com IA um site pra cada um a partir dos dados reais (nome, endereço, telefone, horários e fotos) e publica num link público que o vendedor manda pro dono pelo WhatsApp. Tudo funciona por créditos, e o custo de cada ação aparece antes de ela rodar. Frontend na Vercel, API e banco no Railway, pagamento real via Pix e cartão.
+                        </p>
+                        <div className="mt-3 flex flex-wrap gap-1.5">
+                            <TechPill label="Next.js 16" />
+                            <TechPill label="React 19" />
+                            <TechPill label="TypeScript" />
+                            <TechPill label="Tailwind CSS v4" />
+                            <TechPill label="Node.js / Express" />
+                            <TechPill label="Prisma" />
+                            <TechPill label="PostgreSQL" />
+                            <TechPill label="Claude API (Anthropic)" />
+                            <TechPill label="Google Places API" />
+                            <TechPill label="Google OAuth" />
+                            <TechPill label="Asaas (Pix e cartão)" />
+                            <TechPill label="Leaflet" />
+                            <TechPill label="Vercel + Railway" />
+                        </div>
+                        <span className="block mt-4 text-xs font-semibold text-foreground tracking-[1px]">FLUXO TÉCNICO</span>
+                        <ul className="mt-2 list-disc pl-4 text-sm text-icons/90 space-y-1.5">
+                            <li>Login só com Google: o backend valida o token no Google (conferindo o <code className="text-[13px]">aud</code> contra o próprio client id) e devolve um <strong>cookie HttpOnly assinado com HMAC</strong>, válido em <code className="text-[13px]">pagefy.app</code> e <code className="text-[13px]">api.pagefy.app</code>, sem tabela de sessão.</li>
+                            <li>A busca consulta a <strong>Google Places API</strong> por cidade e ramo, filtra quem não tem site, está fechado ou fica a mais de 35 km, e guarda o resultado em cache por 6 h compartilhado entre usuários — cidade repetida não custa nada. O app já abre com a cidade do visitante buscada (localizada pelo IP).</li>
+                            <li>O gerador reserva os créditos ao confirmar o prompt, faz uma checagem rápida na web se o negócio já tem site próprio e, se não tiver, gera o HTML numa <strong>chamada única à Claude</strong>. Se falhar ou for interrompido, os créditos voltam na hora.</li>
+                            <li>O site é publicado em <code className="text-[13px]">/p/[slug]</code>, e o botão “Enviar pro dono” gera uma mensagem de WhatsApp com o link, pronta pra editar ou abrir já preenchida.</li>
+                            <li>O checkout acontece dentro do app: <strong>Pix com QR Code</strong> (com polling do status e webhook do Asaas) ou <strong>cartão</strong>, com planos virando assinatura recorrente. Estornos totais ou parciais tiram os créditos proporcionais de forma idempotente, travando a linha do pagamento (<code className="text-[13px]">FOR UPDATE</code>).</li>
+                        </ul>
+                        <span className="block mt-4 text-xs font-semibold text-foreground tracking-[1px]">DESTAQUES</span>
+                        <ul className="mt-2 list-disc pl-4 text-sm text-icons/90 space-y-1.5">
+                            <li>Segurança em camadas pro HTML escrito por IA: o código é limpo de scripts externos, trackers, formulários e redirecionamentos na prévia, no download e na publicação, e a página pública é servida com uma <strong>CSP estrita</strong> que bloqueia qualquer chamada de rede.</li>
+                            <li>Preços decididos por custo medido: cada chamada paga registra a ação que a causou, e trocar o gerador de um agente com ferramentas por uma chamada única derrubou o custo por site de ~US$ 1,30 pra ~US$ 0,50 mantendo a qualidade.</li>
+                            <li>Proteção contra abuso do plano grátis: o bônus de boas-vindas é concedido uma vez por rede a cada 24 h, guardando só um HMAC do IP, nunca o IP em si.</li>
+                            <li>Infraestrutura de produção completa: domínio próprio com DNS, e-mail no domínio (DKIM/SPF), migrations aplicadas a cada deploy e health check.</li>
+                        </ul>
+                        <div className="mt-5 flex max-w-full gap-3 text-xs">
+                            <a href="https://github.com/dzn0/pagefy-showcase" target="_blank" rel="noopener noreferrer" className="group transition transform duration-200 hover:scale-110 px-[10px] py-[8px] bg-foreground text-background font-semibold rounded-lg flex gap-3">Código
+                                <ArrowUpRightIcon className="h-4 w-4 group-hover:translate-x-1 transition transform duration-200" />
+                            </a>
+                            <a href="https://pagefy.app/" target="_blank" rel="noopener noreferrer" className="group px-[10px] py-[8px] bg-foreground text-background font-semibold rounded-lg flex gap-3 transition transform duration-200 hover:scale-110">Produto
+                                <ArrowUpRightIcon className="h-4 w-4 transition transform duration-200 group-hover:translate-x-1" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Portfólio Pessoal */}
+                <div className="flex gap-4">
                     <div className="flex flex-col items-center">
                         <span className="w-3 h-3 rounded-full bg-foreground mt-1.5 shrink-0" />
                         <span className="w-0.5 flex-1 bg-muted mt-1" />

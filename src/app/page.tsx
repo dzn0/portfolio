@@ -81,7 +81,7 @@ export default function Home() {
           <BiLogoPostgresql className="text-[#336791]" size={14} />
           PostgreSQL
         </span>
-        <span> com experiência em pagamento (Stripe/Pix). Construí o analisacv.com.br, uma plataforma de análise de currículo com IA em produção com pagamento real, e atualmente estou evoluindo o devtracker, um sistema de gestão de tarefas full-stack com autenticação e persistência em PostgreSQL.</span>
+        <span> com experiência em pagamento (Stripe/Pix). Construí o Pagefy, uma plataforma que usa a API do Google Places pra encontrar comércios locais sem site e a API da Anthropic (Claude) pra gerar um site pronto pra cada um, com checkout Pix e cartão integrado, e atualmente estou evoluindo o devtracker, um sistema de gestão de tarefas full-stack com autenticação e persistência em PostgreSQL.</span>
       </div>
       {/* View Resume */}
       <div className="mt-4 sm:mt-9 p-1 ml-3 sm:ml-6 w-fit">
@@ -93,37 +93,37 @@ export default function Home() {
         {/* Featured build */}
         <RevealOnScreen>
           <div className="rounded-xl border border-project flex-col sm:flex flex-row gap-3">
-            <div className="sm:w-2/5">
+            <div className="sm:w-1/2 sm:self-start aspect-square overflow-hidden rounded-t-xl sm:rounded-r-none sm:rounded-l-xl sm:border-r sm:border-project">
               <video
-                src="/analisa-cv-16-9.mp4"
+                src="/pagefy-1-1.mp4"
                 autoPlay
                 loop
                 muted
                 playsInline
-                className="w-full h-48 sm:h-full object-cover rounded-t-xl sm:rounded-r-none sm:rounded-l-xl sm:border-r sm:border-project"
+                className="w-full h-full object-cover"
               />
             </div>
-            <div className="sm:w-3/5">
+            <div className="sm:w-1/2">
               <div className="p-5">
                 <div className="flex gap-2 tracking-[3px] font-semibold text-icons scale-y-95">
                   <h2 className="font-[family-name:var(--font-roboto-mono)] text-xs">EM</h2>
                   <h2 className="font-[family-name:var(--font-roboto-mono)] text-xs">DESTAQUE</h2>
                 </div>
                 <div className="font-thin mt-3 flex-col">
-                  <span className="text-xl">AnalisaCV: um SaaS de análise de currículo.</span>
+                  <span className="text-xl">Pagefy: sites prontos pra vender a comércios locais.</span>
                 </div>
                 <div className="text-muted mt-3 text-sm">
-                  <span>Extrai currículos em PDF e gera feedback com IA, com checkout Pix integrado.</span>
+                  <span>Encontra comércios sem site com dados reais do Google e gera com IA um site pronto pra cada um, com link público pra enviar ao dono e checkout Pix e cartão.</span>
                 </div>
                 <div className="mt-4 flex flex-wrap text-[11px] text-icons font-pfp-border gap-2">
-                  <div className="border border-project rounded-full p-2">JavaScript</div><div className="border border-project rounded-full p-2">Claude API (Anthropic)</div><div className="border border-project rounded-full p-2">Stripe</div><div className="border border-project rounded-full p-2">Vercel Edge Functions</div>
+                  <div className="border border-project rounded-full p-2">Next.js</div><div className="border border-project rounded-full p-2">Node.js / Express</div><div className="border border-project rounded-full p-2">PostgreSQL</div><div className="border border-project rounded-full p-2">Claude API (Anthropic)</div><div className="border border-project rounded-full p-2">Google Places</div><div className="border border-project rounded-full p-2">Asaas (Pix)</div>
                 </div>
                 {/* Buttons */}
                 <div className="mt-5 flex max-w-full gap-3 text-xs">
-                  <a href="https://github.com/dzn0/analisa-cv" target="_blank" rel="noopener noreferrer" className="group transition transform duration-200 hover:scale-110 px-[10px] py-[8px] bg-foreground text-background font-semibold rounded-lg flex gap-3">Código
+                  <a href="https://github.com/dzn0/pagefy-showcase" target="_blank" rel="noopener noreferrer" className="group transition transform duration-200 hover:scale-110 px-[10px] py-[8px] bg-foreground text-background font-semibold rounded-lg flex gap-3">Código
                     <ArrowUpRightIcon className="h-4 w-4 group-hover:translate-x-1 transition transform duration-200" />
                   </a>
-                  <a href="https://www.analisacv.com.br/" target="_blank" rel="noopener noreferrer" className="group px-[10px] py-[8px] bg-foreground text-background font-semibold rounded-lg flex gap-3 transition transform duration-200 hover:scale-110">Produto
+                  <a href="https://pagefy.app/" target="_blank" rel="noopener noreferrer" className="group px-[10px] py-[8px] bg-foreground text-background font-semibold rounded-lg flex gap-3 transition transform duration-200 hover:scale-110">Produto
                     <ArrowUpRightIcon className="h-4 w-4 transition transform duration-200 group-hover:translate-x-1" />
                   </a>
                 </div>
@@ -168,6 +168,38 @@ export default function Home() {
         </RevealOnScreen>
         <div className="flex flex-col items-center md:flex-row md:flex-wrap md:justify-center gap-6">
           <RevealOnScreen className="md:flex-none md:basis-[calc(50%-12px)]">
+            {/* Pagefy */}
+            <SpotlightCard className="border border-project p-3 flex flex-col rounded-xl mt-5 h-full">
+              <div className="flex justify-center border border-project rounded-xl bg-[#e0e0e0] relative z-10 overflow-hidden">
+                <div>
+                  <Lightbox className="p-1 rounded-xl w-auto h-40 hover:scale-110 transition transform duration-200"
+                    src="/pagefy-screenshoot.png"
+                    alt="Pagefy"
+                    width={2557}
+                    height={1194}
+                  />
+                </div>
+              </div>
+              <span className="text-lg font-medium mt-4">Pagefy</span>
+              <span className="text-icons font-medium text-sm">Criador & Desenvolvedor Único</span>
+              <span className="text-sm text-icons/90">Encontra comércios sem site pelo Google e gera com IA um site pronto pra vender a cada um.</span>
+              <div className="mt-4 flex gap-2 items-center">
+                <BiLogoTypescript className="text-[#3178c6] hover:text-[#6ba6e8] transition transform duration-200 hover:-translate-y-1" size={24} />
+                <RiNextjsFill className="text-foreground transition transform duration-200 hover:-translate-y-1" size={22} />
+                <RiTailwindCssFill className="text-[#38bdf8] hover:text-[#7dd3fc] transition transform duration-200 hover:-translate-y-1" size={22} />
+                <FaNodeJs className="text-[#339933] hover:text-[#4dcc4d] transition transform duration-200 hover:-translate-y-1" size={22} />
+                <SiPrisma className="text-foreground transition transform duration-200 hover:-translate-y-1" size={22} />
+                <BiLogoPostgresql className="text-[#336791] hover:text-[#5a8fc0] transition transform duration-200 hover:-translate-y-1" size={22} />
+                <BsClaude className="text-[#d47255] hover:text-[#e39a83] transition transform duration-200 hover:-translate-y-1" size={22} />
+              </div>
+              <hr className="mt-4 text-project border-dashed" />
+              <div className="flex text-muted items-center gap-2 mt-3 mb-1 ml-auto font-[family-name:var(--font-roboto-mono)] text-[11px] tracking-[2px] scale-y-95">
+                <a href="https://github.com/dzn0/pagefy-showcase" target="_blank" rel="noopener noreferrer" className="flex items-center group hover:text-hover-muted">CÓDIGO<ArrowUpRightIcon className="h-3 w-3 group-hover:translate-x-1 transition transform duration-200" /></a>
+                <a href="https://pagefy.app/" target="_blank" rel="noopener noreferrer" className="flex items-center group hover:text-hover-muted">PRODUTO<ArrowUpRightIcon className="h-3 w-3 group-hover:translate-x-1 transition transform duration-200" /></a>
+              </div>
+            </SpotlightCard>
+          </RevealOnScreen>
+          <RevealOnScreen className="md:flex-none md:basis-[calc(50%-12px)]">
             {/* AnalisaCV */}
             <SpotlightCard className="border border-project p-3 flex flex-col rounded-xl mt-5 h-full">
               <div className="flex justify-center border border-project rounded-xl bg-[#e0e0e0] relative z-10 overflow-hidden">
@@ -200,7 +232,7 @@ export default function Home() {
           </RevealOnScreen>
           {/* Portfólio Pessoal */}
           <RevealOnScreen className="md:flex-none md:basis-[calc(50%-12px)]">
-            <SpotlightCard className="border border-project p-3 flex flex-col rounded-xl h-full mt-5">
+            <SpotlightCard className="border border-project p-3 flex flex-col rounded-xl h-full">
               <div className="flex justify-center border border-project rounded-xl bg-[#e0e0e0] relative z-10 overflow-hidden">
                 <div>
                   <Lightbox className="p-1 rounded-xl w-auto h-40 hover:scale-110 transition transform duration-200"

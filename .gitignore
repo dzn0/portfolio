@@ -42,3 +42,6 @@ next-env.d.ts
 
 .vercel
 .env*
+
+# uncompressed video masters (only the compressed copies in public/ ship)
+/video-src

@@ -1,0 +1,82 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - paragraph [ref=e3]: ANDRÉ P. PIERI
+    - paragraph [ref=e4]: Full-Stack Web Developer
+    - paragraph [ref=e5]: Dourados • Mato Grosso do Sul, Brasil | 67 99611-5591 | andrepereirapieri@gmail.com github.com/dzn0 | andrepieri.com.br | linkedin.com/in/andré-pieri
+  - heading "Experiência Profissional" [level=2] [ref=e6]
+  - generic [ref=e7]:
+    - generic [ref=e8]:
+      - generic [ref=e9]: OSHIRO ARQUITETURA
+      - generic [ref=e10]: Dourados, Mato Grosso do Sul
+    - generic [ref=e11]:
+      - generic [ref=e12]: Estagiário Técnico em CAD
+      - generic [ref=e13]: Abril 2024 – Julho 2025
+    - list [ref=e14]:
+      - listitem [ref=e15]: Desenvolvi sketches e modelagens 3D/2D para projetos residenciais utilizando AutoCAD, SketchUp e Revit.
+      - listitem [ref=e16]: Produzi renderizações fotorrealistas com Enscape para apresentação visual de projetos a clientes.
+      - listitem [ref=e17]: Auxiliei na organização e revisão de arquivos de projeto (AutoCAD/Revit), garantindo consistência entre versões e entregas.
+  - heading "Projetos Selecionados" [level=2] [ref=e18]
+  - generic [ref=e19]:
+    - generic [ref=e20]:
+      - generic [ref=e21]: Pagefy | Criador & Desenvolvedor Único
+      - generic [ref=e22]: Em produção
+    - paragraph [ref=e23]: Next.js • React • TypeScript • Node.js/Express • PostgreSQL/Prisma • Claude API (Anthropic) • Google Places API • Asaas (Pix e cartão)
+    - list [ref=e24]:
+      - listitem [ref=e25]:
+        - text: "Desenvolvi um SaaS que prospecta comércios locais sem site: a busca consulta a"
+        - strong [ref=e26]: Google Places API
+        - text: por cidade e ramo, filtra quem não tem site ou está fora do raio de atuação e mantém cache compartilhado de 6h, eliminando o custo de consultas repetidas.
+      - listitem [ref=e27]:
+        - text: Integrei a
+        - strong [ref=e28]: Claude API (Anthropic)
+        - text: para gerar o site completo de cada negócio a partir dos dados reais do Google; substituir um agente com ferramentas por uma chamada única reduziu o custo por site de ~US$ 1,30 para ~US$ 0,50, mantendo a qualidade.
+      - listitem [ref=e29]:
+        - text: Implementei checkout próprio com
+        - strong [ref=e30]: Pix (QR Code com polling e webhook)
+        - text: e cartão recorrente via Asaas, sobre um sistema de créditos com reserva antecipada, devolução automática em falhas e estornos idempotentes com lock transacional.
+      - listitem [ref=e31]:
+        - text: Blindei o HTML gerado por IA removendo scripts, trackers e redirecionamentos antes da publicação, servindo a página pública sob
+        - strong [ref=e32]: CSP estrita
+        - text: ; autenticação via Google OAuth com cookie HttpOnly assinado em HMAC, sem tabela de sessão.
+  - generic [ref=e33]:
+    - generic [ref=e34]:
+      - generic [ref=e35]: AnalisaCV | Criador & Desenvolvedor Único
+      - generic [ref=e36]: Em produção
+    - paragraph [ref=e37]: HTML/CSS/JS • Vercel Edge Functions • Claude API (Anthropic) • Mercado Pago (Pix)
+    - list [ref=e38]:
+      - listitem [ref=e39]: Desenvolvi uma aplicação serverless de análise de currículo, extraindo texto de PDF e gerando feedback estruturado (pontos fortes, fracos e sugestões de melhoria) via Claude AI.
+      - listitem [ref=e40]: Integrei gateway de pagamento Pix (Mercado Pago) para desbloquear a reescrita completa das seções do currículo, com fluxo de checkout, geração de QR Code e verificação de status de pagamento via API.
+      - listitem [ref=e41]: Arquitetei o backend inteiramente em funções serverless (Vercel Edge Functions), cobrindo análise via IA, geração e checagem de pagamento, sem servidor dedicado.
+  - generic [ref=e42]:
+    - generic [ref=e43]:
+      - generic [ref=e44]: Portfólio Pessoal | Criador & Desenvolvedor Único
+      - generic [ref=e45]: Em produção
+    - paragraph [ref=e46]: Next.js • TypeScript • Tailwind CSS • Node.js • Express • Prisma • PostgreSQL
+    - list [ref=e47]:
+      - listitem [ref=e48]: Site pessoal com frontend em Next.js/TypeScript e backend próprio em Node.js/Express, incluindo um contador de visitantes em tempo real persistido via Prisma/PostgreSQL.
+      - listitem [ref=e49]: Deploy completo (frontend, backend e banco de dados) na Vercel, com CI/CD e variáveis de ambiente configuradas para produção.
+  - generic [ref=e50]:
+    - generic [ref=e51]:
+      - generic [ref=e52]: DevTracker | Criador & Desenvolvedor Único
+      - generic [ref=e53]: Em desenvolvimento
+    - paragraph [ref=e54]: Next.js • Tailwind CSS • TypeScript • Node.js • PostgreSQL • Prisma
+    - list [ref=e55]:
+      - listitem [ref=e56]: Desenvolvendo uma aplicação de acompanhamento de estudo/código com registro de sessões (tecnologia, tempo, data, nota), estatísticas agregadas (horas totais, streak, tecnologia mais estudada) e heatmap de atividade estilo GitHub.
+      - listitem [ref=e57]: Construindo a aba de sessões em Next.js/TypeScript, incluindo listagem, edição, exclusão e as estatísticas agregadas; persistência via PostgreSQL/Prisma planejada para a próxima etapa.
+  - heading "Habilidades Técnicas" [level=2] [ref=e58]
+  - list [ref=e59]:
+    - listitem [ref=e60]: "Linguagens: JavaScript, TypeScript"
+    - listitem [ref=e61]: "Frameworks & Bibliotecas: Next.js, Node.js, React, Tailwind CSS"
+    - listitem [ref=e62]: "Bancos de Dados: SQL, PostgreSQL, Prisma"
+    - listitem [ref=e63]: "APIs & IA: Claude API (Anthropic), Google Places API, Google OAuth, REST APIs, Asaas (Pix e cartão), Mercado Pago (Pix)"
+    - listitem [ref=e64]: "Ferramentas de Desenvolvimento: Git, GitHub, Vercel, VS Code, Visual Studio, npm"
+    - listitem [ref=e65]: "Produtividade & Design: Figma, Adobe Photoshop, Adobe Illustrator, Canva, CorelDRAW"
+    - listitem [ref=e66]: "Línguas: Português (Nativo), Inglês (Intermediário)"
+  - heading "Educação" [level=2] [ref=e67]
+  - generic [ref=e68]:
+    - paragraph [ref=e69]: Faculdade Infnet | Rio de Janeiro, Brasil
+    - paragraph [ref=e70]: Bacharelado em Engenharia de Software
+    - paragraph [ref=e71]: 2026 – 2030 (Esperado)
+  - heading "Certificados & Treinamentos" [level=2] [ref=e72]
+  - list [ref=e73]:
+    - listitem [ref=e74]: Claude Code 101 — Anthropic Academy (2026)
