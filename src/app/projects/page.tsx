@@ -35,7 +35,7 @@ export default function Projects() {
                         <span className="text-xs text-muted">Em produção</span>
                         <h3 className="text-lg font-medium">Pagefy: sites prontos pra vender a comércios locais.</h3>
                         <Lightbox className="mt-3 rounded border border-project transition transform duration-200 hover:scale-110 w-19 h-auto"
-                            src="/pagefy-screenshot.png"
+                            src="/pagefy-screenshoot.png"
                             alt="Pagefy"
                             width={2557}
                             height={1194}
