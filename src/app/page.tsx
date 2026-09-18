@@ -110,7 +110,7 @@ export default function Home() {
                   <h2 className="font-[family-name:var(--font-roboto-mono)] text-xs">DESTAQUE</h2>
                 </div>
                 <div className="font-thin mt-3 flex-col">
-                  <span className="text-xl">Pagefy: sites prontos pra vender a comércios locais.</span>
+                  <span className="text-xl">Pagefy: um SaaS de prospecção e criação de sites com IA.</span>
                 </div>
                 <div className="text-muted mt-3 text-sm">
                   <span>Encontra comércios sem site com dados reais do Google e gera com IA um site pronto pra cada um, com link público pra enviar ao dono e checkout Pix e cartão.</span>
