@@ -95,6 +95,15 @@
   .skills-label {
     font-weight: 700;
   }
+  a { color: inherit; text-decoration: none; }
+  .entry-links {
+    font-size: 9.3pt;
+    white-space: nowrap;
+    margin-left: 10px;
+  }
+  .summary {
+    margin: 1px 0 1px 0 !important;
+  }
   .edu-degree {
     font-size: 10.3pt;
     font-weight: 700;
@@ -105,12 +114,12 @@
 
   <div class="header">
     <p class="name">ANDRÉ P. PIERI</p>
-    <p class="title">Full-Stack Web Developer</p>
+    <p class="title">Desenvolvedor Full-Stack</p>
     <p class="contact">
-      Presidente Prudente • São Paulo, Brasil &nbsp;|&nbsp; 67 99611-5591 &nbsp;|&nbsp; andrepereirapieri@gmail.com<br>
-      github.com/dzn0 &nbsp;|&nbsp;
-      andrepieri.com.br &nbsp;|&nbsp;
-      linkedin.com/in/andré-pieri
+      Presidente Prudente • São Paulo, Brasil &nbsp;|&nbsp; 67 99611-5591 &nbsp;|&nbsp; <a href="mailto:andrepereirapieri@gmail.com">andrepereirapieri@gmail.com</a><br>
+      <a href="https://github.com/dzn0">github.com/dzn0</a> &nbsp;|&nbsp;
+      <a href="https://www.andrepieri.com.br/">andrepieri.com.br</a> &nbsp;|&nbsp;
+      <a href="https://www.linkedin.com/in/andr%C3%A9-pieri-914563358/">linkedin.com/in/andré-pieri-914563358</a>
     </p>
   </div>
 
@@ -119,6 +128,50 @@
     Atuar como Desenvolvedor Full-Stack em estágio ou vaga júnior, com foco em React/Next.js, Node.js e PostgreSQL.
     Disponível para início imediato e mudança de cidade.
   </p>
+
+  <h2 class="section">Projetos Selecionados</h2>
+
+  <div class="entry">
+    <div class="entry-row">
+      <span class="entry-title">Pagefy | Criador &amp; Desenvolvedor Único</span>
+      <span class="entry-links"><a href="https://pagefy.app/">pagefy.app</a> &nbsp;·&nbsp; <a href="https://github.com/dzn0/pagefy-showcase">github.com/dzn0/pagefy-showcase</a></span>
+    </div>
+    <p class="stack-line">Next.js &bull; React &bull; TypeScript &bull; Node.js/Express &bull; PostgreSQL/Prisma &bull; Claude API (Anthropic) &bull; Google Places API &bull; Asaas (Pix e cartão)</p>
+    <p class="summary">SaaS em produção que encontra comércios locais sem site e gera, com IA, um site pronto para cada um, com pagamento via Pix e cartão.</p>
+    <ul>
+      <li>Construí a busca de comércios sobre a <strong>Google Places API</strong> por cidade e ramo, filtrando quem não tem site ou está fora do raio de atuação, com cache compartilhado de 6h que elimina o custo de consultas repetidas.</li>
+      <li>Integrei a <strong>Claude API (Anthropic)</strong> para gerar o site completo de cada negócio a partir dos dados reais do Google; substituir um agente com ferramentas por uma chamada única reduziu o custo por site de ~US$ 1,30 para ~US$ 0,50, mantendo a qualidade.</li>
+      <li>Implementei checkout próprio com <strong>Pix (QR Code com polling e webhook)</strong> e cartão recorrente via Asaas, sobre um sistema de créditos com reserva antecipada, devolução automática em falhas e estornos idempotentes com lock transacional.</li>
+      <li>Blindei o HTML gerado por IA removendo scripts, trackers e redirecionamentos antes da publicação, servindo a página pública sob <strong>CSP estrita</strong>; autenticação via Google OAuth com cookie HttpOnly assinado em HMAC, sem tabela de sessão.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-row">
+      <span class="entry-title">AnalisaCV | Criador &amp; Desenvolvedor Único</span>
+      <span class="entry-links"><a href="https://www.analisacv.com.br/">analisacv.com.br</a> &nbsp;·&nbsp; <a href="https://github.com/dzn0/analisa-cv">github.com/dzn0/analisa-cv</a></span>
+    </div>
+    <p class="stack-line">HTML/CSS/JS &bull; Vercel Edge Functions &bull; Claude API (Anthropic) &bull; Mercado Pago (Pix)</p>
+    <p class="summary">Aplicação em produção que analisa currículos em PDF com IA e libera a reescrita completa mediante pagamento via Pix.</p>
+    <ul>
+      <li>Implementei a extração de texto de PDF e a geração de <strong>feedback estruturado via Claude API</strong> (pontos fortes, pontos fracos e sugestões de melhoria).</li>
+      <li>Integrei <strong>pagamento Pix (Mercado Pago)</strong> para desbloquear a reescrita completa das seções do currículo, com fluxo de checkout, geração de QR Code e verificação de status via API.</li>
+      <li>Arquitetei o backend inteiramente em <strong>funções serverless (Vercel Edge Functions)</strong>, cobrindo análise via IA, geração e checagem de pagamento, sem servidor dedicado.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-row">
+      <span class="entry-title">Portfólio Pessoal | Criador &amp; Desenvolvedor Único</span>
+      <span class="entry-links"><a href="https://www.andrepieri.com.br/">andrepieri.com.br</a> &nbsp;·&nbsp; <a href="https://github.com/dzn0/portfolio">github.com/dzn0/portfolio</a></span>
+    </div>
+    <p class="stack-line">Next.js &bull; TypeScript &bull; Tailwind CSS &bull; Node.js &bull; Express &bull; Prisma &bull; PostgreSQL</p>
+    <p class="summary">Site pessoal em produção com projetos, currículo e contador de visitantes em tempo real.</p>
+    <ul>
+      <li>Frontend em Next.js/TypeScript e <strong>backend próprio em Node.js/Express</strong>, com o contador de visitantes persistido via <strong>Prisma/PostgreSQL</strong>.</li>
+      <li><strong>Deploy completo na Vercel</strong> (frontend, backend e banco de dados), com CI/CD e variáveis de ambiente configuradas para produção.</li>
+    </ul>
+  </div>
 
   <h2 class="section">Experiência Profissional</h2>
 
@@ -132,50 +185,8 @@
       <span class="entry-date">Abril 2024 – Julho 2025</span>
     </div>
     <ul>
-      <li>Desenvolvi sketches e modelagens 3D/2D para projetos residenciais utilizando AutoCAD, SketchUp e Revit.</li>
-      <li>Produzi renderizações fotorrealistas com Enscape para apresentação visual de projetos a clientes.</li>
-      <li>Auxiliei na organização e revisão de arquivos de projeto (AutoCAD/Revit), garantindo consistência entre versões e entregas.</li>
-    </ul>
-  </div>
-
-  <h2 class="section">Projetos Selecionados</h2>
-
-  <div class="entry">
-    <div class="entry-row">
-      <span class="entry-title">Pagefy | Criador &amp; Desenvolvedor Único</span>
-      <span class="entry-date">Em produção</span>
-    </div>
-    <p class="stack-line">Next.js &bull; React &bull; TypeScript &bull; Node.js/Express &bull; PostgreSQL/Prisma &bull; Claude API (Anthropic) &bull; Google Places API &bull; Asaas (Pix e cartão)</p>
-    <ul>
-      <li>Desenvolvi um SaaS que prospecta comércios locais sem site: a busca consulta a <strong>Google Places API</strong> por cidade e ramo, filtra quem não tem site ou está fora do raio de atuação e mantém cache compartilhado de 6h, eliminando o custo de consultas repetidas.</li>
-      <li>Integrei a <strong>Claude API (Anthropic)</strong> para gerar o site completo de cada negócio a partir dos dados reais do Google; substituir um agente com ferramentas por uma chamada única reduziu o custo por site de ~US$ 1,30 para ~US$ 0,50, mantendo a qualidade.</li>
-      <li>Implementei checkout próprio com <strong>Pix (QR Code com polling e webhook)</strong> e cartão recorrente via Asaas, sobre um sistema de créditos com reserva antecipada, devolução automática em falhas e estornos idempotentes com lock transacional.</li>
-      <li>Blindei o HTML gerado por IA removendo scripts, trackers e redirecionamentos antes da publicação, servindo a página pública sob <strong>CSP estrita</strong>; autenticação via Google OAuth com cookie HttpOnly assinado em HMAC, sem tabela de sessão.</li>
-    </ul>
-  </div>
-
-  <div class="entry">
-    <div class="entry-row">
-      <span class="entry-title">AnalisaCV | Criador &amp; Desenvolvedor Único</span>
-      <span class="entry-date">Em produção</span>
-    </div>
-    <p class="stack-line">HTML/CSS/JS &bull; Vercel Edge Functions &bull; Claude API (Anthropic) &bull; Mercado Pago (Pix)</p>
-    <ul>
-      <li>Desenvolvi uma aplicação serverless de análise de currículo, extraindo texto de PDF e gerando feedback estruturado (pontos fortes, fracos e sugestões de melhoria) via Claude AI.</li>
-      <li>Integrei gateway de pagamento Pix (Mercado Pago) para desbloquear a reescrita completa das seções do currículo, com fluxo de checkout, geração de QR Code e verificação de status de pagamento via API.</li>
-      <li>Arquitetei o backend inteiramente em funções serverless (Vercel Edge Functions), cobrindo análise via IA, geração e checagem de pagamento, sem servidor dedicado.</li>
-    </ul>
-  </div>
-
-  <div class="entry">
-    <div class="entry-row">
-      <span class="entry-title">Portfólio Pessoal | Criador &amp; Desenvolvedor Único</span>
-      <span class="entry-date">Em produção</span>
-    </div>
-    <p class="stack-line">Next.js &bull; TypeScript &bull; Tailwind CSS &bull; Node.js &bull; Express &bull; Prisma &bull; PostgreSQL</p>
-    <ul>
-      <li>Site pessoal com frontend em Next.js/TypeScript e backend próprio em Node.js/Express, incluindo um contador de visitantes em tempo real persistido via Prisma/PostgreSQL.</li>
-      <li>Deploy completo (frontend, backend e banco de dados) na Vercel, com CI/CD e variáveis de ambiente configuradas para produção.</li>
+      <li>Entreguei modelagens 2D/3D e renderizações para <strong>apresentação a clientes</strong> em projetos residenciais.</li>
+      <li>Organizei e revisei arquivos de projeto, mantendo <strong>consistência entre versões e entregas</strong>.</li>
     </ul>
   </div>
 
@@ -194,9 +205,9 @@
 
   <h2 class="section">Educação</h2>
   <div class="entry">
-    <p><span class="entry-place">Faculdade Infnet |</span> Rio de Janeiro, Brasil</p>
+    <p><span class="entry-place">Faculdade Infnet |</span> Rio de Janeiro, Brasil (EAD)</p>
     <p class="edu-degree">Bacharelado em Engenharia de Software</p>
-    <p>2026 – 2030 (Esperado)</p>
+    <p>2026 – 2030 (Esperado) &bull; 1º semestre</p>
   </div>
 
   <h2 class="section">Certificados &amp; Treinamentos</h2>
