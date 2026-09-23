@@ -75,7 +75,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               <div className="flex justify-center gap-2 items-center mt-2">
                 <span className="text-foreground text-[13px]">André Pieri</span>
                 <span className="text-[#6a7282]/50">/</span>
-                <span className="text-foreground/50 text-[13px]">Mato Grosso do Sul, Brasil</span>
+                <span className="text-foreground/50 text-[13px]">São Paulo, Brasil</span>
               </div>
             </div>
             <div className="mt-2 sm:mt-0 flex text-[#6a7282] font-medium text-[14px] border border-project w-fit mx-auto sm:mx-0 rounded-3xl p-1 px-2 gap-1 border-dashed">
